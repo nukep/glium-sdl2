@@ -1,10 +1,11 @@
 [package]
 name = "glium_sdl2"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Dan Spencer <dan@atomicpotato.net>"]
 license = "MIT"
 keywords = ["graphics", "gamedev", "glium", "sdl", "opengl"]
 documentation = "http://nukep.github.io/glium-sdl2/"
+repository = "https://github.com/nukep/glium-sdl2/"
 description = "An SDL2 backend for Glium - a high-level OpenGL wrapper for the Rust language."
 
 [dependencies]
