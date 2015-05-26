@@ -1,0 +1,20 @@
+[package]
+name = "glium_sdl2"
+version = "0.1.0"
+authors = ["Dan Spencer <dan@atomicpotato.net>"]
+license = "MIT"
+
+[dependencies]
+sdl2 = "0.3.0"
+libc = "0.1"
+
+[dependencies.glium]
+version = "0.4"
+# Do not include glutin by default
+features = ["image", "nalgebra", "cgmath", "gl_read_buffer", "gl_depth_textures"]
+default-features = false
+
+[dev-dependencies]
+clock_ticks = "0.0.5"
+genmesh = "0.2.1"
+obj = "0.2.1"
