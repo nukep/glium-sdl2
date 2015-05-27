@@ -1,43 +1,43 @@
-/// An SDL2 backend for [Glium](https://github.com/tomaka/glium) - a high-level
-/// OpenGL wrapper for the Rust language.
-///
-/// # Example
-/// ```no_run
-/// # #[macro_use] extern crate glium;
-/// # extern crate glium_sdl2;
-/// # extern crate sdl2;
-/// # fn main() {
-/// use glium_sdl2::DisplayBuild;
-///
-/// let mut sdl_context = sdl2::init().video().unwrap();
-///
-/// let display = sdl_context.window("My window", 800, 600)
-///     .resizable()
-///     .build_glium()
-///     .unwrap();
-///
-/// let mut running = true;
-///
-/// while running {
-///     let mut target = display.draw();
-///     // do drawing here...
-///     target.finish();
-///
-///     // Event loop: includes all windows
-///
-///     for event in sdl_context.event_pump().poll_iter() {
-///         use sdl2::event::Event;
-///
-///         match event {
-///             Event::Quit { .. } => {
-///                 running = false;
-///             },
-///             _ => ()
-///         }
-///     }
-/// }
-/// # }
-/// ```
+//! An SDL2 backend for [Glium](https://github.com/tomaka/glium) - a high-level
+//! OpenGL wrapper for the Rust language.
+//!
+//! # Example
+//! ```no_run
+//! # #[macro_use] extern crate glium;
+//! # extern crate glium_sdl2;
+//! # extern crate sdl2;
+//! # fn main() {
+//! use glium_sdl2::DisplayBuild;
+//!
+//! let mut sdl_context = sdl2::init().video().unwrap();
+//!
+//! let display = sdl_context.window("My window", 800, 600)
+//!     .resizable()
+//!     .build_glium()
+//!     .unwrap();
+//!
+//! let mut running = true;
+//!
+//! while running {
+//!     let mut target = display.draw();
+//!     // do drawing here...
+//!     target.finish();
+//!
+//!     // Event loop: includes all windows
+//!
+//!     for event in sdl_context.event_pump().poll_iter() {
+//!         use sdl2::event::Event;
+//!
+//!         match event {
+//!             Event::Quit { .. } => {
+//!                 running = false;
+//!             },
+//!             _ => ()
+//!         }
+//!     }
+//! }
+//! # }
+//! ```
 
 extern crate libc;
 
