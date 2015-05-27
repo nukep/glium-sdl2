@@ -1,6 +1,7 @@
 # glium_sdl2
 
 [![Build Status](https://travis-ci.org/nukep/glium-sdl2.svg)](https://travis-ci.org/nukep/glium-sdl2)
+[![Latest Version](https://img.shields.io/crates/v/glium_sdl2.svg)](https://crates.io/crates/glium_sdl2)
 
 An SDL2 backend for [Glium](https://github.com/tomaka/glium) - a high-level
 OpenGL wrapper for the Rust language.
