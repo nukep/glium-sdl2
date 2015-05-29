@@ -1,6 +1,6 @@
 [package]
 name = "glium_sdl2"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Dan Spencer <dan@atomicpotato.net>"]
 license = "MIT"
 keywords = ["graphics", "gamedev", "glium", "sdl", "opengl"]
