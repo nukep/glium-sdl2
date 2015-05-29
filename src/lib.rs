@@ -56,6 +56,7 @@ use sdl2::SdlResult;
 pub type Display = SDL2Facade;
 
 /// Facade implementation for an SDL2 window.
+#[derive(Clone)]
 pub struct SDL2Facade {
     // contains everything related to the current context and its state
     context: Rc<Context>,
