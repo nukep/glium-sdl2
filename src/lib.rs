@@ -46,6 +46,7 @@ extern crate sdl2;
 
 use std::mem;
 use std::cell::UnsafeCell;
+use std::ops::Deref;
 use std::rc::Rc;
 
 use glium::backend::{Backend, Context, Facade};
@@ -64,6 +65,12 @@ pub struct SDL2Facade {
 
 impl Facade for SDL2Facade {
     fn get_context(&self) -> &Rc<Context> { &self.context }
+}
+
+impl Deref for SDL2Facade {
+    type Target = Context;
+
+    fn deref(&self) -> &Context { &self.context }
 }
 
 impl SDL2Facade {
