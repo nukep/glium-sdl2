@@ -49,6 +49,7 @@ use std::cell::UnsafeCell;
 use std::ops::Deref;
 use std::rc::Rc;
 
+use glium::SwapBuffersError;
 use glium::backend::{Backend, Context, Facade};
 use sdl2::Sdl;
 use sdl2::SdlResult;
@@ -170,8 +171,13 @@ impl SDL2WindowBackend {
 }
 
 unsafe impl Backend for SDL2WindowBackend {
-    fn swap_buffers(&self) {
+    fn swap_buffers(&self) -> Result<(), SwapBuffersError> {
         self.window().gl_swap_window();
+
+        // AFAIK, SDL or `SDL_GL_SwapWindow` doesn't have any way to detect context loss.
+        // TODO: Find out if context loss is an issue in SDL2 (especially for the Android port).
+
+        Ok(())
     }
 
     unsafe fn get_proc_address(&self, symbol: &str) -> *const libc::c_void {

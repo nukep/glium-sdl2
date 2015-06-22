@@ -154,26 +154,26 @@ impl CameraState {
 
     pub fn process_input(&mut self, event: &sdl2::event::Event) {
         use sdl2::event::Event::*;
-        use sdl2::keycode::KeyCode;
+        use sdl2::keyboard::Keycode;
 
         match event {
-            &KeyDown { keycode: KeyCode::Space, .. } => { self.moving_up = true; },
-            &KeyUp   { keycode: KeyCode::Space, .. } => { self.moving_up = false; },
+            &KeyDown { keycode: Some(Keycode::Space), .. } => { self.moving_up = true; },
+            &KeyUp   { keycode: Some(Keycode::Space), .. } => { self.moving_up = false; },
 
-            &KeyDown { keycode: KeyCode::Down, .. } => { self.moving_down = true; },
-            &KeyUp   { keycode: KeyCode::Down, .. } => { self.moving_down = false; },
+            &KeyDown { keycode: Some(Keycode::Down), .. } => { self.moving_down = true; },
+            &KeyUp   { keycode: Some(Keycode::Down), .. } => { self.moving_down = false; },
 
-            &KeyDown { keycode: KeyCode::A, .. } => { self.moving_left = true; },
-            &KeyUp   { keycode: KeyCode::A, .. } => { self.moving_left = false; },
+            &KeyDown { keycode: Some(Keycode::A), .. } => { self.moving_left = true; },
+            &KeyUp   { keycode: Some(Keycode::A), .. } => { self.moving_left = false; },
 
-            &KeyDown { keycode: KeyCode::D, .. } => { self.moving_right = true; },
-            &KeyUp   { keycode: KeyCode::D, .. } => { self.moving_right = false; },
+            &KeyDown { keycode: Some(Keycode::D), .. } => { self.moving_right = true; },
+            &KeyUp   { keycode: Some(Keycode::D), .. } => { self.moving_right = false; },
 
-            &KeyDown { keycode: KeyCode::W, .. } => { self.moving_forward = true; },
-            &KeyUp   { keycode: KeyCode::W, .. } => { self.moving_forward = false; },
+            &KeyDown { keycode: Some(Keycode::W), .. } => { self.moving_forward = true; },
+            &KeyUp   { keycode: Some(Keycode::W), .. } => { self.moving_forward = false; },
 
-            &KeyDown { keycode: KeyCode::S, .. } => { self.moving_backward = true; },
-            &KeyUp   { keycode: KeyCode::S, .. } => { self.moving_backward = false; },
+            &KeyDown { keycode: Some(Keycode::S), .. } => { self.moving_backward = true; },
+            &KeyUp   { keycode: Some(Keycode::S), .. } => { self.moving_backward = false; },
 
             _ => {}
         }
