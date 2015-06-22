@@ -56,7 +56,7 @@ fn main() {
         target.clear_color(0.0, 0.0, 1.0, 1.0);
         target.draw(&vertex_buffer, &indices, &program, &glium::uniforms::EmptyUniforms,
                     &Default::default()).unwrap();
-        target.finish();
+        target.finish().unwrap();
 
         for event in sdl_context.event_pump().poll_iter() {
             use sdl2::event::Event;
