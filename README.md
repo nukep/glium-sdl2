@@ -11,20 +11,20 @@ are in heavy development and are subject to change.
 
 ```toml
 [dependencies]
-glium_sdl2 = "0.4"
+glium_sdl2 = "0.5"
 sdl2 = "0.7"
 
 [dependencies.glium]
-version = "0.7"
+version = "0.8"
 # Remove any Glium features that you don't use
-features = ["image", "nalgebra", "cgmath", "gl_read_buffer", "gl_depth_textures"]
+features = ["image", "nalgebra", "cgmath"]
 default-features = false
 ```
 
 glium_sdl2 doesn't reexport the `glium` or `sdl2` crates, so you must declare
 them _with the versions listed above_ in your `Cargo.toml` file.
 
-glium_sdl2 will be bumped to 0.5, 0.6, etc. once this library, `glium` or `sdl2`
+glium_sdl2 will be bumped to 0.6, 0.7, etc. once this library, `glium` or `sdl2`
 make breaking changes.
 
 ## [Documentation](http://nukep.github.io/glium-sdl2/)
@@ -45,14 +45,16 @@ extern crate sdl2;
 fn main() {
     use glium_sdl2::DisplayBuild;
 
-    let mut sdl_context = sdl2::init().video().unwrap();
+    let sdl_context = sdl2::init().unwrap();
+    let video_subsystem = sdl_context.video().unwrap();
 
-    let display = sdl_context.window("My window", 800, 600)
+    let display = video_subsystem.window("My window", 800, 600)
         .resizable()
         .build_glium()
         .unwrap();
 
     let mut running = true;
+    let mut event_pump = sdl_context.event_pump().unwrap();
 
     while running {
         let mut target = display.draw();
@@ -61,7 +63,7 @@ fn main() {
 
         // Event loop: includes all windows
 
-        for event in sdl_context.event_pump().poll_iter() {
+        for event in event_pump.poll_iter() {
             use sdl2::event::Event;
 
             match event {
