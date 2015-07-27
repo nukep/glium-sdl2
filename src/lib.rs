@@ -9,23 +9,25 @@
 //! # fn main() {
 //! use glium_sdl2::DisplayBuild;
 //!
-//! let mut sdl_context = sdl2::init().video().unwrap();
+//! let sdl_context = sdl2::init().unwrap();
+//! let video_subsystem = sdl_context.video().unwrap();
 //!
-//! let display = sdl_context.window("My window", 800, 600)
+//! let display = video_subsystem.window("My window", 800, 600)
 //!     .resizable()
 //!     .build_glium()
 //!     .unwrap();
 //!
 //! let mut running = true;
+//! let mut event_pump = sdl_context.event_pump().unwrap();
 //!
 //! while running {
 //!     let mut target = display.draw();
 //!     // do drawing here...
-//!     target.finish();
+//!     target.finish().unwrap();
 //!
 //!     // Event loop: includes all windows
 //!
-//!     for event in sdl_context.event_pump().poll_iter() {
+//!     for event in event_pump.poll_iter() {
 //!         use sdl2::event::Event;
 //!
 //!         match event {
@@ -51,8 +53,9 @@ use std::rc::Rc;
 
 use glium::SwapBuffersError;
 use glium::backend::{Backend, Context, Facade};
-use sdl2::Sdl;
 use sdl2::SdlResult;
+use sdl2::VideoSubsystem;
+use sdl2::video::{Window, WindowRef};
 
 pub type Display = SDL2Facade;
 
@@ -76,19 +79,12 @@ impl Deref for SDL2Facade {
 }
 
 impl SDL2Facade {
-    /// Get the SDL Window ID.
-    pub fn window_id(&self) -> u32 {
-        self.backend.window().get_id()
+    pub fn window(&self) -> &WindowRef {
+        self.backend.window()
     }
 
-    /// Accesses the Window properties, such as the position, size and title of a Window.
-    pub fn properties<'a>(&'a mut self, sdl: &'a Sdl) -> sdl2::video::WindowProperties<'a> {
-        self.backend.window_mut().properties(sdl)
-    }
-
-    /// Immutably accesses the Window properties, such as the position, size and title of a Window.
-    pub fn properties_getters(&self) -> sdl2::video::WindowPropertiesGetters {
-        self.backend.window().properties_getters()
+    pub fn window_mut(&mut self) -> &mut WindowRef {
+        self.backend.window_mut()
     }
 
     /// Start drawing on the backbuffer.
@@ -149,14 +145,22 @@ pub struct SDL2WindowBackend {
 }
 
 impl SDL2WindowBackend {
-    fn window(&self) -> &sdl2::video::Window {
+    fn subsystem(&self) -> &VideoSubsystem {
         let ptr = self.window.get();
-        unsafe { mem::transmute(ptr) }
+        let window: &Window = unsafe { mem::transmute(ptr) };
+        window.subsystem()
     }
 
-    fn window_mut(&self) -> &mut sdl2::video::Window {
+    fn window(&self) -> &WindowRef {
         let ptr = self.window.get();
-        unsafe { mem::transmute(ptr) }
+        let window: &Window = unsafe { mem::transmute(ptr) };
+        window
+    }
+
+    fn window_mut(&self) -> &mut WindowRef {
+        let ptr = self.window.get();
+        let window: &mut Window = unsafe { mem::transmute(ptr) };
+        window
     }
 
     pub fn new(window_builder: &mut sdl2::video::WindowBuilder) -> SdlResult<SDL2WindowBackend> {
@@ -183,11 +187,11 @@ unsafe impl Backend for SDL2WindowBackend {
     unsafe fn get_proc_address(&self, symbol: &str) -> *const libc::c_void {
         // Assumes the appropriate context for the window has been set before this call.
 
-        sdl2::video::gl_get_proc_address(symbol)
+        self.subsystem().gl_get_proc_address(symbol)
     }
 
     fn get_framebuffer_dimensions(&self) -> (u32, u32) {
-        let (width, height) = self.window().properties_getters().get_drawable_size();
+        let (width, height) = self.window().get_drawable_size();
         (width as u32, height as u32)
     }
 

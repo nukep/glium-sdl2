@@ -8,9 +8,10 @@ fn main() {
     use glium_sdl2::DisplayBuild;
     use glium::Surface;
 
-    let mut sdl_context = sdl2::init().video().unwrap();
+    let sdl_context = sdl2::init().unwrap();
+    let video_subsystem = sdl_context.video().unwrap();
 
-    let display = sdl_context.window("Tutorial 01", 800, 600).resizable().build_glium().unwrap();
+    let display = video_subsystem.window("Tutorial 01", 800, 600).resizable().build_glium().unwrap();
 
     #[derive(Copy, Clone)]
     struct Vertex {
@@ -50,6 +51,7 @@ fn main() {
     let program = glium::Program::from_source(&display, vertex_shader_src, fragment_shader_src, None).unwrap();
 
     let mut running = true;
+    let mut event_pump = sdl_context.event_pump().unwrap();
 
     while running {
         let mut target = display.draw();
@@ -58,7 +60,7 @@ fn main() {
                     &Default::default()).unwrap();
         target.finish().unwrap();
 
-        for event in sdl_context.event_pump().poll_iter() {
+        for event in event_pump.poll_iter() {
             use sdl2::event::Event;
 
             match event {

@@ -10,14 +10,14 @@ mod support;
 
 fn main() {
     use glium_sdl2::DisplayBuild;
-    use sdl2::video::gl_attr;
 
-    let mut sdl_context = sdl2::init().video().unwrap();
+    let sdl_context = sdl2::init().unwrap();
+    let video_subsystem = sdl_context.video().unwrap();
 
-    gl_attr::set_depth_size(24);
+    video_subsystem.gl_attr().set_depth_size(24);
 
     // building the display, ie. the main object
-    let display = sdl_context.window("Teapot", 800, 600)
+    let display = video_subsystem.window("Teapot", 800, 600)
         .build_glium()
         .unwrap();
 
@@ -133,6 +133,8 @@ fn main() {
     //
     let mut camera = support::camera::CameraState::new();
 
+    let mut event_pump = sdl_context.event_pump().unwrap();
+
     // the main loop
     support::start_loop(|| {
 
@@ -161,7 +163,7 @@ fn main() {
         target.finish().unwrap();
 
         // polling and handling the events received by the window
-        for event in sdl_context.event_pump().poll_iter() {
+        for event in event_pump.poll_iter() {
             use sdl2::event::Event;
 
             match event {
