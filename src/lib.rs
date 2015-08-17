@@ -104,17 +104,17 @@ impl SDL2Facade {
 /// implementations on types from external crates, unless the trait is in the same crate as the impl.
 pub trait DisplayBuild {
     /// Build a context and a facade to draw on it.
-    fn build_glium(self) -> Result<SDL2Facade, glium::GliumCreationError<String>>;
+    fn build_glium(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>>;
 
     /// Build a context and a facade to draw on it
     ///
     /// This function does the same as `build_glium`, except that the resulting context will assume
     /// that the current OpenGL context will never change.
-    unsafe fn build_glium_unchecked(self) -> Result<SDL2Facade, glium::GliumCreationError<String>>;
+    unsafe fn build_glium_unchecked(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>>;
 }
 
 impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
-    fn build_glium(self) -> Result<SDL2Facade, glium::GliumCreationError<String>> {
+    fn build_glium(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>> {
         let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
         let context = try!(unsafe { Context::new(backend.clone(), true) });
 
@@ -126,7 +126,7 @@ impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
         Ok(display)
     }
 
-    unsafe fn build_glium_unchecked(self) -> Result<SDL2Facade, glium::GliumCreationError<String>> {
+    unsafe fn build_glium_unchecked(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>> {
         let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
         let context = try!(Context::new(backend.clone(), false));
 
@@ -191,7 +191,7 @@ unsafe impl Backend for SDL2WindowBackend {
     }
 
     fn get_framebuffer_dimensions(&self) -> (u32, u32) {
-        let (width, height) = self.window().get_drawable_size();
+        let (width, height) = self.window().drawable_size();
         (width as u32, height as u32)
     }
 
