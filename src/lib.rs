@@ -52,6 +52,7 @@ use std::ops::Deref;
 use std::rc::Rc;
 
 use glium::SwapBuffersError;
+use glium::debug;
 use glium::backend::{Backend, Context, Facade};
 use sdl2::SdlResult;
 use sdl2::VideoSubsystem;
@@ -102,21 +103,56 @@ impl SDL2Facade {
 ///
 /// This trait is different from `glium::DisplayBuild` because Rust doesn't allow trait
 /// implementations on types from external crates, unless the trait is in the same crate as the impl.
+/// To clarify, both `glium::DisplayBuild` and `sdl2::video::WindowBuilder` are in different crates
+/// than `glium_sdl2`.
 pub trait DisplayBuild {
+    /// The object that this `DisplayBuild` builds.
+    type Facade: glium::backend::Facade;
+
+    /// The type of error that initialization can return.
+    type Err;
+
     /// Build a context and a facade to draw on it.
-    fn build_glium(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>>;
+    ///
+    /// Performs a compatibility check to make sure that all core elements of glium
+    /// are supported by the implementation.
+    fn build_glium(self) -> Result<Self::Facade, Self::Err> where Self: Sized {
+        self.build_glium_debug(Default::default())
+    }
+
+    /// Build a context and a facade to draw on it.
+    ///
+    /// Performs a compatibility check to make sure that all core elements of glium
+    /// are supported by the implementation.
+    fn build_glium_debug(self, debug::DebugCallbackBehavior) -> Result<Self::Facade, Self::Err>;
 
     /// Build a context and a facade to draw on it
     ///
-    /// This function does the same as `build_glium`, except that the resulting context will assume
-    /// that the current OpenGL context will never change.
-    unsafe fn build_glium_unchecked(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>>;
+    /// This function does the same as `build_glium`, except that the resulting context
+    /// will assume that the current OpenGL context will never change.
+    unsafe fn build_glium_unchecked(self) -> Result<Self::Facade, Self::Err> where Self: Sized {
+        self.build_glium_unchecked_debug(Default::default())
+    }
+
+    /// Build a context and a facade to draw on it
+    ///
+    /// This function does the same as `build_glium`, except that the resulting context
+    /// will assume that the current OpenGL context will never change.
+    unsafe fn build_glium_unchecked_debug(self, debug::DebugCallbackBehavior)
+                                          -> Result<Self::Facade, Self::Err>;
+
+    // TODO
+    // Changes the settings of an existing facade.
+    // fn rebuild_glium(self, &Self::Facade) -> Result<(), Self::Err>;
 }
 
 impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
-    fn build_glium(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>> {
+    type Facade = SDL2Facade;
+    type Err = glium::GliumCreationError<sdl2::ErrorMessage>;
+
+    fn build_glium_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>> {
         let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(unsafe { Context::new(backend.clone(), true) });
+        let context = try!(unsafe { Context::new(backend.clone(), true, debug) });
 
         let display = SDL2Facade {
             context: context,
@@ -126,9 +162,9 @@ impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
         Ok(display)
     }
 
-    unsafe fn build_glium_unchecked(self) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>> {
+    unsafe fn build_glium_unchecked_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, glium::GliumCreationError<sdl2::ErrorMessage>> {
         let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(Context::new(backend.clone(), false));
+        let context = try!(Context::new(backend.clone(), false, debug));
 
         let display = SDL2Facade {
             context: context,
