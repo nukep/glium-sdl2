@@ -1,6 +1,6 @@
 [package]
 name = "glium_sdl2"
-version = "0.8.0"
+version = "0.9.0"
 authors = ["Dan Spencer <dan@atomicpotato.net>"]
 license = "MIT"
 keywords = ["graphics", "gamedev", "glium", "sdl", "opengl"]
@@ -10,10 +10,9 @@ description = "An SDL2 backend for Glium - a high-level OpenGL wrapper for the R
 
 [dependencies]
 sdl2 = "0.9"
-libc = "0.1"
 
 [dependencies.glium]
-version = "0.10"
+version = "0.12"
 # Do not enable any features by default, as to not bring in unwanted dependencies
 # (Cargo seems to apply a "union" of requested features across projects for any given dependency).
 # Instead, Let the library user define which features they want.
