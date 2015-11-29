@@ -41,8 +41,6 @@
 //! # }
 //! ```
 
-extern crate libc;
-
 extern crate glium;
 extern crate sdl2;
 
@@ -220,10 +218,10 @@ unsafe impl Backend for SDL2WindowBackend {
         Ok(())
     }
 
-    unsafe fn get_proc_address(&self, symbol: &str) -> *const libc::c_void {
+    unsafe fn get_proc_address(&self, symbol: &str) -> *const () {
         // Assumes the appropriate context for the window has been set before this call.
 
-        self.subsystem().gl_get_proc_address(symbol)
+        self.subsystem().gl_get_proc_address(symbol) as *const _
     }
 
     fn get_framebuffer_dimensions(&self) -> (u32, u32) {
