@@ -9,7 +9,7 @@ repository = "https://github.com/nukep/glium-sdl2/"
 description = "An SDL2 backend for Glium - a high-level OpenGL wrapper for the Rust language."
 
 [dependencies]
-sdl2 = "0.12"
+sdl2 = "0.13"
 
 [dependencies.glium]
 version = "0.13"
@@ -20,6 +20,6 @@ features = []
 default-features = false
 
 [dev-dependencies]
-clock_ticks = "0.0.5"
-genmesh = "0.2.1"
-obj = "0.2.1"
+clock_ticks = "0.1.0"
+genmesh = "0.4"
+obj = { version = "0.5", features = ["usegenmesh"] }
