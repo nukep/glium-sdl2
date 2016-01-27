@@ -1,3 +1,12 @@
+// Copyright (c) 2016 glium_sdl2 developers
+// Licensed under the Apache License, Version 2.0
+// <LICENSE-APACHE or
+// http://www.apache.org/licenses/LICENSE-2.0> or the MIT
+// license <LICENSE-MIT or http://opensource.org/licenses/MIT>,
+// at your option. All files in the project carrying such
+// notice may not be copied, modified, or distributed except
+// according to those terms.
+
 //! An SDL2 backend for [Glium](https://github.com/tomaka/glium) - a high-level
 //! OpenGL wrapper for the Rust language.
 //!
@@ -48,6 +57,7 @@ use std::mem;
 use std::cell::UnsafeCell;
 use std::ops::Deref;
 use std::rc::Rc;
+use std::os::raw::c_void;
 
 use glium::SwapBuffersError;
 use glium::debug;
@@ -218,10 +228,10 @@ unsafe impl Backend for SDL2WindowBackend {
         Ok(())
     }
 
-    unsafe fn get_proc_address(&self, symbol: &str) -> *const () {
+    unsafe fn get_proc_address(&self, symbol: &str) -> *const c_void {
         // Assumes the appropriate context for the window has been set before this call.
 
-        self.subsystem().gl_get_proc_address(symbol) as *const _
+        self.subsystem().gl_get_proc_address(symbol) as *const c_void
     }
 
     fn get_framebuffer_dimensions(&self) -> (u32, u32) {
