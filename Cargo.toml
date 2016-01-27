@@ -2,7 +2,7 @@
 name = "glium_sdl2"
 version = "0.10.0"
 authors = ["Dan Spencer <dan@atomicpotato.net>"]
-license = "MIT"
+license = "MIT/Apache-2.0"
 keywords = ["graphics", "gamedev", "glium", "sdl", "opengl"]
 documentation = "http://nukep.github.io/glium-sdl2/"
 repository = "https://github.com/nukep/glium-sdl2/"

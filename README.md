@@ -12,7 +12,7 @@ are in heavy development and are subject to change.
 ```toml
 [dependencies]
 glium_sdl2 = "0.10"
-sdl2 = "0.12"
+sdl2 = "0.13"
 glium = "0.13"
 
 # Remove any Glium features that you don't use
@@ -75,3 +75,17 @@ fn main() {
     }
 }
 ```
+
+## License
+
+Licensed under either of
+ * Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+
+at your option.
+
+### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in the work by you shall be dual licensed as above, without any
+additional terms or conditions.
