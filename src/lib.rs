@@ -65,8 +65,6 @@ use glium::debug;
 use glium::backend::{Backend, Context, Facade};
 use sdl2::VideoSubsystem;
 use sdl2::video::{Window, WindowRef, WindowBuildError};
-use std::io;
-use std::cmp::Ordering;
 
 pub type Display = SDL2Facade;
 
