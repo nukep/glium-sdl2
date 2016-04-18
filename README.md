@@ -11,8 +11,8 @@ are in heavy development and are subject to change.
 
 ```toml
 [dependencies]
-glium_sdl2 = "0.11"
-sdl2 = "0.17"
+glium_sdl2 = "0.12"
+sdl2 = "0.18"
 glium = "0.14"
 
 features = []
@@ -22,7 +22,7 @@ default-features = false
 glium_sdl2 doesn't reexport the `glium` or `sdl2` crates, so you must declare
 them _with the versions listed above_ in your `Cargo.toml` file.
 
-glium_sdl2 will be bumped to 0.12, 0.13, etc. once this library, `glium` or `sdl2`
+glium_sdl2 will be bumped to 0.13, 0.14, etc. once this library, `glium` or `sdl2`
 make breaking changes.
 
 ## [Documentation](http://nukep.github.io/glium-sdl2/)
