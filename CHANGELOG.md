@@ -1,5 +1,8 @@
 # Changes
 
+## Version 0.12 (2016-04-18)
+- Changed SDL2 dependency to version `0.18`
+
 ## Version 0.11 (2016-04-11)
 - Changed glium dependency to version `0.14`
 - Changed SDL2 dependency to version `0.17` fixing use of SdlResult
