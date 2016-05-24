@@ -12,7 +12,7 @@ are in heavy development and are subject to change.
 ```toml
 [dependencies]
 glium_sdl2 = "0.12"
-sdl2 = "0.18"
+sdl2 = "0.19"
 glium = "0.14"
 
 features = []

@@ -9,7 +9,7 @@ repository = "https://github.com/nukep/glium-sdl2/"
 description = "An SDL2 backend for Glium - a high-level OpenGL wrapper for the Rust language."
 
 [dependencies]
-sdl2 = "0.18"
+sdl2 = "0.19"
 
 [dependencies.glium]
 version = "0.14"
