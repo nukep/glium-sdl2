@@ -11,9 +11,9 @@ are in heavy development and are subject to change.
 
 ```toml
 [dependencies]
-glium_sdl2 = "0.12"
-sdl2 = "0.19"
-glium = "0.14"
+glium_sdl2 = "0.13"
+sdl2 = "0.27"
+glium = "0.15"
 
 features = []
 default-features = false
@@ -22,58 +22,21 @@ default-features = false
 glium_sdl2 doesn't reexport the `glium` or `sdl2` crates, so you must declare
 them _with the versions listed above_ in your `Cargo.toml` file.
 
-glium_sdl2 will be bumped to 0.13, 0.14, etc. once this library, `glium` or `sdl2`
+glium_sdl2's version will be bumped once this library, `glium` or `sdl2`
 make breaking changes.
 
 ## [Documentation](http://nukep.github.io/glium-sdl2/)
 
+## [Change log](CHANGELOG.md)
+
 ## Example usage
+
+See the examples/ folder for examples. Here's a bare-bones skeleton program that initializes SDL2 and Glium, and does nothing:
+* [blank.rs](examples/blank.rs)
 
 Using glium with SDL2 is very similar to using glium with glutin.
 Generally speaking, Glium documentation and tutorials should be fairly trivial
 to adapt to SDL2.
-
-```rust
-#[macro_use]
-extern crate glium;
-
-extern crate glium_sdl2;
-extern crate sdl2;
-
-fn main() {
-    use glium_sdl2::DisplayBuild;
-
-    let sdl_context = sdl2::init().unwrap();
-    let video_subsystem = sdl_context.video().unwrap();
-
-    let display = video_subsystem.window("My window", 800, 600)
-        .resizable()
-        .build_glium()
-        .unwrap();
-
-    let mut running = true;
-    let mut event_pump = sdl_context.event_pump().unwrap();
-
-    while running {
-        let mut target = display.draw();
-        // do drawing here...
-        target.finish().unwrap();
-
-        // Event loop: includes all windows
-
-        for event in event_pump.poll_iter() {
-            use sdl2::event::Event;
-
-            match event {
-                Event::Quit { .. } => {
-                    running = false;
-                },
-                _ => ()
-            }
-        }
-    }
-}
-```
 
 ## License
 
