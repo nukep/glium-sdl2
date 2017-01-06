@@ -58,7 +58,6 @@ use std::cell::UnsafeCell;
 use std::ops::Deref;
 use std::rc::Rc;
 use std::os::raw::c_void;
-use std::error::Error;
 
 use glium::SwapBuffersError;
 use glium::debug;
