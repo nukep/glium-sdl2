@@ -4,12 +4,17 @@ extern crate glium;
 extern crate glium_sdl2;
 extern crate sdl2;
 
+use sdl2::video::GLProfile;
+
 fn main() {
     use glium_sdl2::DisplayBuild;
     use glium::Surface;
 
     let sdl_context = sdl2::init().unwrap();
     let video_subsystem = sdl_context.video().unwrap();
+    let gl_attr = video_subsystem.gl_attr();
+    gl_attr.set_context_profile(GLProfile::Core);
+    gl_attr.set_context_version(3, 2);
 
     let display = video_subsystem.window("Tutorial 01", 800, 600).resizable().build_glium().unwrap();
 
