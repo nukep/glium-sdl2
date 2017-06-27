@@ -63,7 +63,7 @@ use glium::SwapBuffersError;
 use glium::debug;
 use glium::backend::{Backend, Context, Facade};
 use sdl2::VideoSubsystem;
-use sdl2::video::{Window, WindowRef, WindowBuildError};
+use sdl2::video::{Window, WindowBuildError};
 
 pub type Display = SDL2Facade;
 
@@ -129,11 +129,11 @@ impl Deref for SDL2Facade {
 }
 
 impl SDL2Facade {
-    pub fn window(&self) -> &WindowRef {
+    pub fn window(&self) -> &Window {
         self.backend.window()
     }
 
-    pub fn window_mut(&mut self) -> &mut WindowRef {
+    pub fn window_mut(&mut self) -> &mut Window {
         self.backend.window_mut()
     }
 
@@ -236,13 +236,13 @@ impl SDL2WindowBackend {
         window.subsystem()
     }
 
-    fn window(&self) -> &WindowRef {
+    fn window(&self) -> &Window {
         let ptr = self.window.get();
         let window: &Window = unsafe { mem::transmute(ptr) };
         window
     }
 
-    fn window_mut(&self) -> &mut WindowRef {
+    fn window_mut(&self) -> &mut Window {
         let ptr = self.window.get();
         let window: &mut Window = unsafe { mem::transmute(ptr) };
         window
