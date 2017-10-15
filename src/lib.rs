@@ -53,61 +53,69 @@
 extern crate glium;
 extern crate sdl2;
 
-use std::mem;
 use std::cell::UnsafeCell;
 use std::ops::Deref;
 use std::rc::Rc;
 use std::os::raw::c_void;
+use std::error::Error;
+use std::fmt;
 
-use glium::SwapBuffersError;
 use glium::debug;
 use glium::backend::{Backend, Context, Facade};
-use sdl2::VideoSubsystem;
-use sdl2::video::{Window, WindowRef, WindowBuildError};
+use sdl2::video as sdl;
 
 pub type Display = SDL2Facade;
 
+use self::GliumSdl2Error::*;
 
 #[derive(Debug)]
 pub enum GliumSdl2Error {
-    WindowBuildError(WindowBuildError),
-    ContextCreationError(String)
+    WindowBuildError(sdl::WindowBuildError),
+    GlContextCreationError(String),
+    GliumContextCreationError(glium::IncompatibleOpenGl),
+}
+
+impl From<glium::IncompatibleOpenGl> for GliumSdl2Error {
+    fn from(err: glium::IncompatibleOpenGl) -> Self {
+        GliumContextCreationError(err)
+    }
+}
+
+impl From<sdl::WindowBuildError> for GliumSdl2Error {
+    fn from(err: sdl::WindowBuildError) -> Self {
+        WindowBuildError(err)
+    }
 }
 
 impl From<String> for GliumSdl2Error {
-    fn from(s : String) -> GliumSdl2Error {
-        return GliumSdl2Error::ContextCreationError(s);
+    fn from(s: String) -> Self {
+        GlContextCreationError(s)
     }
 }
 
-impl From<WindowBuildError> for GliumSdl2Error {
-    fn from(err : WindowBuildError) -> GliumSdl2Error {
-        return GliumSdl2Error::WindowBuildError(err);
-    }
-}
-
-impl std::error::Error for GliumSdl2Error {
+impl Error for GliumSdl2Error {
     fn description(&self) -> &str {
-        return match *self {
-            GliumSdl2Error::WindowBuildError(ref err) => err.description(),
-            GliumSdl2Error::ContextCreationError(ref s) => s
-        }
-    }
-
-    fn cause(&self) -> Option<&std::error::Error> {
         match *self {
-            GliumSdl2Error::WindowBuildError(ref err) => err.cause(),
-            GliumSdl2Error::ContextCreationError(_) => None
+            WindowBuildError(ref err) => err.description(),
+            GlContextCreationError(ref s) => s.as_str(),
+            GliumContextCreationError(ref err) => err.description(),
+        }
+    }
+
+    fn cause(&self) -> Option<&Error> {
+        match *self {
+            WindowBuildError(ref err) => err.cause(),
+            GlContextCreationError(_) => None,
+            GliumContextCreationError(ref err) => err.cause(),
         }
     }
 }
 
-impl std::fmt::Display for GliumSdl2Error {
-    fn fmt(&self, formatter: &mut std::fmt::Formatter) -> Result<(), std::fmt::Error> {
-        formatter.write_str(self.to_string().as_str())
+impl fmt::Display for GliumSdl2Error {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.description())
     }
 }
-
 
 /// Facade implementation for an SDL2 window.
 #[derive(Clone)]
@@ -129,11 +137,11 @@ impl Deref for SDL2Facade {
 }
 
 impl SDL2Facade {
-    pub fn window(&self) -> &WindowRef {
+    pub fn window(&self) -> &sdl::Window {
         self.backend.window()
     }
 
-    pub fn window_mut(&mut self) -> &mut WindowRef {
+    pub fn window_mut(&mut self) -> &mut sdl::Window {
         self.backend.window_mut()
     }
 
@@ -197,70 +205,60 @@ pub trait DisplayBuild {
 
 impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
     type Facade = SDL2Facade;
-    type Err = glium::GliumCreationError<GliumSdl2Error>;
+    type Err = GliumSdl2Error;
 
-    fn build_glium_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, glium::GliumCreationError<GliumSdl2Error>> {
-        let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(unsafe { Context::new(backend.clone(), true, debug) });
+    fn build_glium_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, GliumSdl2Error> {
+        let backend = Rc::new(SDL2WindowBackend::new(self)?);
+        let context = unsafe { Context::new(backend.clone(), true, debug)? };
 
-        let display = SDL2Facade {
+        Ok(SDL2Facade {
             context: context,
             backend: backend
-        };
-
-        Ok(display)
+        })
     }
 
-    unsafe fn build_glium_unchecked_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, glium::GliumCreationError<GliumSdl2Error>> {
-        let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(Context::new(backend.clone(), false, debug));
+    unsafe fn build_glium_unchecked_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, GliumSdl2Error> {
+        let backend = Rc::new(SDL2WindowBackend::new(self)?);
+        let context = Context::new(backend.clone(), false, debug)?;
 
-        let display = SDL2Facade {
+        Ok(SDL2Facade {
             context: context,
             backend: backend
-        };
-
-        Ok(display)
+        })
     }
 }
 
 pub struct SDL2WindowBackend {
-    window: UnsafeCell<sdl2::video::Window>,
-    context: sdl2::video::GLContext
+    window: UnsafeCell<sdl::Window>,
+    context: sdl::GLContext
 }
 
 impl SDL2WindowBackend {
-    fn subsystem(&self) -> &VideoSubsystem {
-        let ptr = self.window.get();
-        let window: &Window = unsafe { mem::transmute(ptr) };
-        window.subsystem()
+    fn window(&self) -> &sdl::Window {
+        /*let ptr = self.window.get();
+        let window: &sdl::Window = unsafe { mem::transmute(ptr) };*/
+        unsafe { &*self.window.get() }
     }
 
-    fn window(&self) -> &WindowRef {
-        let ptr = self.window.get();
-        let window: &Window = unsafe { mem::transmute(ptr) };
-        window
+    fn window_mut(&self) -> &mut sdl::Window {
+        /*let ptr = self.window.get();
+        let window: &mut sdl::Window = unsafe { mem::transmute(ptr) };*/
+        unsafe { &mut *self.window.get() }
     }
 
-    fn window_mut(&self) -> &mut WindowRef {
-        let ptr = self.window.get();
-        let window: &mut Window = unsafe { mem::transmute(ptr) };
-        window
-    }
-
-    pub fn new(window_builder: &mut sdl2::video::WindowBuilder) -> Result<SDL2WindowBackend, GliumSdl2Error> {
-        let window = try!(window_builder.opengl().build());
-        let context = try!(window.gl_create_context());
+    pub fn new(window_builder: &mut sdl::WindowBuilder) -> Result<SDL2WindowBackend, GliumSdl2Error> {
+        let window = window_builder.opengl().build()?;
+        let context = window.gl_create_context()?;
 
         Ok(SDL2WindowBackend {
             window: UnsafeCell::new(window),
-            context: context
+            context: context,
         })
     }
 }
 
 unsafe impl Backend for SDL2WindowBackend {
-    fn swap_buffers(&self) -> Result<(), SwapBuffersError> {
+    fn swap_buffers(&self) -> Result<(), glium::SwapBuffersError> {
         self.window().gl_swap_window();
 
         // AFAIK, SDL or `SDL_GL_SwapWindow` doesn't have any way to detect context loss.
@@ -272,7 +270,7 @@ unsafe impl Backend for SDL2WindowBackend {
     unsafe fn get_proc_address(&self, symbol: &str) -> *const c_void {
         // Assumes the appropriate context for the window has been set before this call.
 
-        self.subsystem().gl_get_proc_address(symbol) as *const c_void
+        self.window().subsystem().gl_get_proc_address(symbol) as *const c_void
     }
 
     fn get_framebuffer_dimensions(&self) -> (u32, u32) {
