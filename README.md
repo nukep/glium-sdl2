@@ -6,14 +6,14 @@
 An SDL2 backend for [Glium](https://github.com/tomaka/glium) - a high-level
 OpenGL wrapper for the Rust language.
 
-This library, along with `glium` and [`rust-sdl2`](https://github.com/AngryLawyer/rust-sdl2),
+This library, along with `glium` and [`rust-sdl2`](https://github.com/Rust-SDL2/rust-sdl2),
 are in heavy development and are subject to change.
 
 ```toml
 [dependencies]
-glium_sdl2 = "0.14"
+glium_sdl2 = "0.15"
 sdl2 = "0.30"
-glium = "0.17"
+glium = "0.18"
 
 features = []
 default-features = false
@@ -25,7 +25,7 @@ them _with the versions listed above_ in your `Cargo.toml` file.
 glium_sdl2's version will be bumped once this library, `glium` or `sdl2`
 make breaking changes.
 
-## [Documentation](http://nukep.github.io/glium-sdl2/)
+## [Documentation](https://docs.rs/glium_sdl2)
 
 ## [Change log](CHANGELOG.md)
 
