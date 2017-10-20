@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["SDL_AllocRW",""],["SDL_FreeRW",""],["SDL_RWFromConstMem",""],["SDL_RWFromFP",""],["SDL_RWFromFile",""],["SDL_RWFromMem",""]],"static":[["RW_SEEK_CUR",""],["RW_SEEK_END",""],["RW_SEEK_SET",""]],"struct":[["SDL_RWops",""]]});

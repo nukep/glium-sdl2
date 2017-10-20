@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DisplayBuild` trait in crate `glium_sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DisplayBuild">
+
+    <title>glium_sdl2::DisplayBuild - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc trait">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Trait DisplayBuild</p><div class="block items"><ul><li><a href="#associated-types">Associated Types</a></li><li><a href="#required-methods">Required Methods</a></li><li><a href="#provided-methods">Provided Methods</a></li><li><a href="#foreign-impls">Implementations on Foreign Types</a></li><li><a href="#implementors">Implementors</a></li></ul></div><p class='location'><a href='index.html'>glium_sdl2</a></p><script>window.sidebarCurrent = {name: 'DisplayBuild', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>glium_sdl2</a>::<wbr><a class="trait" href=''>DisplayBuild</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/glium_sdl2/lib.rs.html#167-206' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait DisplayBuild {
+    type <a href='#associatedtype.Facade' class="type">Facade</a>: <a class="trait" href="../glium/backend/trait.Facade.html" title="trait glium::backend::Facade">Facade</a>;
+    type <a href='#associatedtype.Err' class="type">Err</a>;
+    fn <a href='#tymethod.build_glium_debug' class='fnname'>build_glium_debug</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_: <a class="enum" href="../glium/context/enum.DebugCallbackBehavior.html" title="enum glium::context::DebugCallbackBehavior">DebugCallbackBehavior</a><br>&nbsp;&nbsp;&nbsp;&nbsp;) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt;;
+<div class='item-spacer'></div>    unsafe fn <a href='#tymethod.build_glium_unchecked_debug' class='fnname'>build_glium_unchecked_debug</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_: <a class="enum" href="../glium/context/enum.DebugCallbackBehavior.html" title="enum glium::context::DebugCallbackBehavior">DebugCallbackBehavior</a><br>&nbsp;&nbsp;&nbsp;&nbsp;) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt;;
+
+    fn <a href='#method.build_glium' class='fnname'>build_glium</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt;<br>&nbsp;&nbsp;&nbsp; <span class="where">where<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Self: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a></span>,
+    { ... }
+<div class='item-spacer'></div>    unsafe fn <a href='#method.build_glium_unchecked' class='fnname'>build_glium_unchecked</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt;<br>&nbsp;&nbsp;&nbsp; <span class="where">where<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Self: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a></span>,
+    { ... }
+}</pre><div class='docblock'><p>An object that can build a facade object.</p>
+
+<p>This trait is different from <code>glium::DisplayBuild</code> because Rust doesn&#39;t allow trait
+implementations on types from external crates, unless the trait is in the same crate as the impl.
+To clarify, both <code>glium::DisplayBuild</code> and <code>sdl2::video::WindowBuilder</code> are in different crates
+than <code>glium_sdl2</code>.</p>
+</div>
+            <h2 id='associated-types' class='small-section-header'>
+              Associated Types<a href='#associated-types' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='associatedtype.Facade' class='method'><span id='Facade.t' class='invisible'><code>type <a href='#associatedtype.Facade' class="type">Facade</a>: <a class="trait" href="../glium/backend/trait.Facade.html" title="trait glium::backend::Facade">Facade</a></code></span></h3><div class='docblock'><p>The object that this <code>DisplayBuild</code> builds.</p>
+</div><h3 id='associatedtype.Err' class='method'><span id='Err.t' class='invisible'><code>type <a href='#associatedtype.Err' class="type">Err</a></code></span></h3><div class='docblock'><p>The type of error that initialization can return.</p>
+</div></div>
+            <h2 id='required-methods' class='small-section-header'>
+              Required Methods<a href='#required-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='tymethod.build_glium_debug' class='method'><span id='build_glium_debug.v' class='invisible'><code>fn <a href='#tymethod.build_glium_debug' class='fnname'>build_glium_debug</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_: <a class="enum" href="../glium/context/enum.DebugCallbackBehavior.html" title="enum glium::context::DebugCallbackBehavior">DebugCallbackBehavior</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt;</code></span></h3><div class='docblock'><p>Build a context and a facade to draw on it.</p>
+
+<p>Performs a compatibility check to make sure that all core elements of glium
+are supported by the implementation.</p>
+</div><h3 id='tymethod.build_glium_unchecked_debug' class='method'><span id='build_glium_unchecked_debug.v' class='invisible'><code>unsafe fn <a href='#tymethod.build_glium_unchecked_debug' class='fnname'>build_glium_unchecked_debug</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_: <a class="enum" href="../glium/context/enum.DebugCallbackBehavior.html" title="enum glium::context::DebugCallbackBehavior">DebugCallbackBehavior</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt;</code></span></h3><div class='docblock'><p>Build a context and a facade to draw on it</p>
+
+<p>This function does the same as <code>build_glium</code>, except that the resulting context
+will assume that the current OpenGL context will never change.</p>
+</div></div>
+            <h2 id='provided-methods' class='small-section-header'>
+              Provided Methods<a href='#provided-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='method.build_glium' class='method'><span id='build_glium.v' class='invisible'><code>fn <a href='#method.build_glium' class='fnname'>build_glium</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Self: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code></span></h3><div class='docblock'><p>Build a context and a facade to draw on it.</p>
+
+<p>Performs a compatibility check to make sure that all core elements of glium
+are supported by the implementation.</p>
+</div><h3 id='method.build_glium_unchecked' class='method'><span id='build_glium_unchecked.v' class='invisible'><code>unsafe fn <a href='#method.build_glium_unchecked' class='fnname'>build_glium_unchecked</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Self: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code></span></h3><div class='docblock'><p>Build a context and a facade to draw on it</p>
+
+<p>This function does the same as <code>build_glium</code>, except that the resulting context
+will assume that the current OpenGL context will never change.</p>
+</div></div>
+                <h2 id='foreign-impls' class='section-header'>
+                  Implementations on Foreign Types<a href='#foreign-impls' class='anchor'></a>
+                </h2>
+            <h3 id='impl-DisplayBuild' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="trait" href="../glium_sdl2/trait.DisplayBuild.html" title="trait glium_sdl2::DisplayBuild">DisplayBuild</a> for &amp;'a mut <a class="struct" href="../sdl2/video/struct.WindowBuilder.html" title="struct sdl2::video::WindowBuilder">WindowBuilder</a></code><a href='#impl-DisplayBuild' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/glium_sdl2/lib.rs.html#208-235' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='associatedtype.Facade-1' class="type"><span id='Facade.t-1' class='invisible'><code>type <a href='#associatedtype.Facade' class="type">Facade</a> = <a class="struct" href="../glium_sdl2/struct.SDL2Facade.html" title="struct glium_sdl2::SDL2Facade">SDL2Facade</a></code></span></h4>
+<h4 id='associatedtype.Err-1' class="type"><span id='Err.t-1' class='invisible'><code>type <a href='#associatedtype.Err' class="type">Err</a> = <a class="enum" href="../glium_sdl2/enum.GliumSdl2Error.html" title="enum glium_sdl2::GliumSdl2Error">GliumSdl2Error</a></code></span></h4>
+<h4 id='method.build_glium_debug' class="method"><span id='build_glium_debug.v-1' class='invisible'><code>fn <a href='#method.build_glium_debug' class='fnname'>build_glium_debug</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;debug: <a class="enum" href="../glium/context/enum.DebugCallbackBehavior.html" title="enum glium::context::DebugCallbackBehavior">DebugCallbackBehavior</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../glium_sdl2/struct.SDL2Facade.html" title="struct glium_sdl2::SDL2Facade">SDL2Facade</a>, <a class="enum" href="../glium_sdl2/enum.GliumSdl2Error.html" title="enum glium_sdl2::GliumSdl2Error">GliumSdl2Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/glium_sdl2/lib.rs.html#212-222' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.build_glium_unchecked_debug' class="method"><span id='build_glium_unchecked_debug.v-1' class='invisible'><code>unsafe fn <a href='#method.build_glium_unchecked_debug' class='fnname'>build_glium_unchecked_debug</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;debug: <a class="enum" href="../glium/context/enum.DebugCallbackBehavior.html" title="enum glium::context::DebugCallbackBehavior">DebugCallbackBehavior</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../glium_sdl2/struct.SDL2Facade.html" title="struct glium_sdl2::SDL2Facade">SDL2Facade</a>, <a class="enum" href="../glium_sdl2/enum.GliumSdl2Error.html" title="enum glium_sdl2::GliumSdl2Error">GliumSdl2Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/glium_sdl2/lib.rs.html#224-234' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.build_glium-1' class="method"><span id='build_glium.v-1' class='invisible'><code>fn <a href='../glium_sdl2/trait.DisplayBuild.html#method.build_glium' class='fnname'>build_glium</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Self: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/glium_sdl2/lib.rs.html#178-180' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.build_glium_unchecked-1' class="method"><span id='build_glium_unchecked.v-1' class='invisible'><code>unsafe fn <a href='../glium_sdl2/trait.DisplayBuild.html#method.build_glium_unchecked' class='fnname'>build_glium_unchecked</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Facade" title="type glium_sdl2::DisplayBuild::Facade">Facade</a>, Self::<a class="type" href="../glium_sdl2/trait.DisplayBuild.html#associatedtype.Err" title="type glium_sdl2::DisplayBuild::Err">Err</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Self: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/glium_sdl2/lib.rs.html#192-194' title='goto source code'>[src]</a></span></h4>
+</div></span>
+        <h2 id='implementors' class='small-section-header'>
+          Implementors<a href='#implementors' class='anchor'></a>
+        </h2>
+        <ul class='item-list' id='implementors-list'>
+    </ul><script type="text/javascript" async
+                         src="../implementors/glium_sdl2/trait.DisplayBuild.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "glium_sdl2";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

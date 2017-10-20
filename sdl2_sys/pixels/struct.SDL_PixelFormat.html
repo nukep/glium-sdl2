@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SDL_PixelFormat` struct in crate `sdl2_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SDL_PixelFormat">
+
+    <title>sdl2_sys::pixels::SDL_PixelFormat - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct SDL_PixelFormat</p><div class="block items"><ul><li><a href="#fields">Fields</a></li></ul></div><p class='location'><a href='../index.html'>sdl2_sys</a>::<wbr><a href='index.html'>pixels</a></p><script>window.sidebarCurrent = {name: 'SDL_PixelFormat', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2_sys</a>::<wbr><a href='index.html'>pixels</a>::<wbr><a class="struct" href=''>SDL_PixelFormat</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2_sys/pixels.rs.html#25-45' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct SDL_PixelFormat {
+    pub format: <a class="type" href="../../sdl2_sys/pixels/type.SDL_PixelFormatEnum.html" title="type sdl2_sys::pixels::SDL_PixelFormatEnum">SDL_PixelFormatEnum</a>,
+    pub palette: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../sdl2_sys/pixels/struct.SDL_Palette.html" title="struct sdl2_sys::pixels::SDL_Palette">SDL_Palette</a>,
+    pub BitsPerPixel: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub BytesPerPixel: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub padding: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.array.html">[</a><a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.array.html">; 2]</a>,
+    pub Rmask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Gmask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Bmask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Amask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Rloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Gloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Bloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Aloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Rshift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Gshift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Bshift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub Ashift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub refcount: <a class="type" href="../../libc/type.c_int.html" title="type libc::c_int">c_int</a>,
+    pub next: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../sdl2_sys/pixels/struct.SDL_PixelFormat.html" title="struct sdl2_sys::pixels::SDL_PixelFormat">SDL_PixelFormat</a>,
+}</pre><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.format" class="structfield small-section-header">
+                           <a href="#structfield.format" class="anchor field"></a>
+                           <span id="format.v" class='invisible'>
+                           <code>format: <a class="type" href="../../sdl2_sys/pixels/type.SDL_PixelFormatEnum.html" title="type sdl2_sys::pixels::SDL_PixelFormatEnum">SDL_PixelFormatEnum</a></code>
+                           </span></span><span id="structfield.palette" class="structfield small-section-header">
+                           <a href="#structfield.palette" class="anchor field"></a>
+                           <span id="palette.v" class='invisible'>
+                           <code>palette: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../sdl2_sys/pixels/struct.SDL_Palette.html" title="struct sdl2_sys::pixels::SDL_Palette">SDL_Palette</a></code>
+                           </span></span><span id="structfield.BitsPerPixel" class="structfield small-section-header">
+                           <a href="#structfield.BitsPerPixel" class="anchor field"></a>
+                           <span id="BitsPerPixel.v" class='invisible'>
+                           <code>BitsPerPixel: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.BytesPerPixel" class="structfield small-section-header">
+                           <a href="#structfield.BytesPerPixel" class="anchor field"></a>
+                           <span id="BytesPerPixel.v" class='invisible'>
+                           <code>BytesPerPixel: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.padding" class="structfield small-section-header">
+                           <a href="#structfield.padding" class="anchor field"></a>
+                           <span id="padding.v" class='invisible'>
+                           <code>padding: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.array.html">[</a><a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.array.html">; 2]</a></code>
+                           </span></span><span id="structfield.Rmask" class="structfield small-section-header">
+                           <a href="#structfield.Rmask" class="anchor field"></a>
+                           <span id="Rmask.v" class='invisible'>
+                           <code>Rmask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Gmask" class="structfield small-section-header">
+                           <a href="#structfield.Gmask" class="anchor field"></a>
+                           <span id="Gmask.v" class='invisible'>
+                           <code>Gmask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Bmask" class="structfield small-section-header">
+                           <a href="#structfield.Bmask" class="anchor field"></a>
+                           <span id="Bmask.v" class='invisible'>
+                           <code>Bmask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Amask" class="structfield small-section-header">
+                           <a href="#structfield.Amask" class="anchor field"></a>
+                           <span id="Amask.v" class='invisible'>
+                           <code>Amask: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Rloss" class="structfield small-section-header">
+                           <a href="#structfield.Rloss" class="anchor field"></a>
+                           <span id="Rloss.v" class='invisible'>
+                           <code>Rloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Gloss" class="structfield small-section-header">
+                           <a href="#structfield.Gloss" class="anchor field"></a>
+                           <span id="Gloss.v" class='invisible'>
+                           <code>Gloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Bloss" class="structfield small-section-header">
+                           <a href="#structfield.Bloss" class="anchor field"></a>
+                           <span id="Bloss.v" class='invisible'>
+                           <code>Bloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Aloss" class="structfield small-section-header">
+                           <a href="#structfield.Aloss" class="anchor field"></a>
+                           <span id="Aloss.v" class='invisible'>
+                           <code>Aloss: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Rshift" class="structfield small-section-header">
+                           <a href="#structfield.Rshift" class="anchor field"></a>
+                           <span id="Rshift.v" class='invisible'>
+                           <code>Rshift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Gshift" class="structfield small-section-header">
+                           <a href="#structfield.Gshift" class="anchor field"></a>
+                           <span id="Gshift.v" class='invisible'>
+                           <code>Gshift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Bshift" class="structfield small-section-header">
+                           <a href="#structfield.Bshift" class="anchor field"></a>
+                           <span id="Bshift.v" class='invisible'>
+                           <code>Bshift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.Ashift" class="structfield small-section-header">
+                           <a href="#structfield.Ashift" class="anchor field"></a>
+                           <span id="Ashift.v" class='invisible'>
+                           <code>Ashift: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.refcount" class="structfield small-section-header">
+                           <a href="#structfield.refcount" class="anchor field"></a>
+                           <span id="refcount.v" class='invisible'>
+                           <code>refcount: <a class="type" href="../../libc/type.c_int.html" title="type libc::c_int">c_int</a></code>
+                           </span></span><span id="structfield.next" class="structfield small-section-header">
+                           <a href="#structfield.next" class="anchor field"></a>
+                           <span id="next.v" class='invisible'>
+                           <code>next: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../sdl2_sys/pixels/struct.SDL_PixelFormat.html" title="struct sdl2_sys::pixels::SDL_PixelFormat">SDL_PixelFormat</a></code>
+                           </span></span></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2_sys";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

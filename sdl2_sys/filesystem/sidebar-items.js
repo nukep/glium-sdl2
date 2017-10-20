@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["SDL_GetBasePath",""],["SDL_GetPrefPath",""]]});

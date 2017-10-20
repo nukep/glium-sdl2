@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `mouse` mod in crate `sdl2_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, mouse">
+
+    <title>sdl2_sys::mouse - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Module mouse</p><div class="block items"><ul><li><a href="#constants">Constants</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'><a href='../index.html'>sdl2_sys</a></p><script>window.sidebarCurrent = {name: 'mouse', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>sdl2_sys</a>::<wbr><a class="mod" href=''>mouse</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2_sys/mouse.rs.html#1-56' title='goto source code'>[src]</a></span></h1>
+<h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_LEFT.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_LEFT'>SDL_BUTTON_LEFT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_LMASK.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_LMASK'>SDL_BUTTON_LMASK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_MIDDLE.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_MIDDLE'>SDL_BUTTON_MIDDLE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_MMASK.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_MMASK'>SDL_BUTTON_MMASK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_RIGHT.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_RIGHT'>SDL_BUTTON_RIGHT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_RMASK.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_RMASK'>SDL_BUTTON_RMASK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_UNKNOWN.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_UNKNOWN'>SDL_BUTTON_UNKNOWN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_X1.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_X1'>SDL_BUTTON_X1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_X2.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_X2'>SDL_BUTTON_X2</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_X1MASK.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_X1MASK'>SDL_BUTTON_X1MASK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BUTTON_X2MASK.html"
+                                  title='constant sdl2_sys::mouse::SDL_BUTTON_X2MASK'>SDL_BUTTON_X2MASK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_NUM_SYSTEM_CURSORS.html"
+                                  title='constant sdl2_sys::mouse::SDL_NUM_SYSTEM_CURSORS'>SDL_NUM_SYSTEM_CURSORS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_ARROW.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_ARROW'>SDL_SYSTEM_CURSOR_ARROW</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_CROSSHAIR.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_CROSSHAIR'>SDL_SYSTEM_CURSOR_CROSSHAIR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_HAND.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_HAND'>SDL_SYSTEM_CURSOR_HAND</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_IBEAM.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_IBEAM'>SDL_SYSTEM_CURSOR_IBEAM</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_NO.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_NO'>SDL_SYSTEM_CURSOR_NO</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_SIZEALL.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_SIZEALL'>SDL_SYSTEM_CURSOR_SIZEALL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_SIZENESW.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_SIZENESW'>SDL_SYSTEM_CURSOR_SIZENESW</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_SIZENS.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_SIZENS'>SDL_SYSTEM_CURSOR_SIZENS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_SIZENWSE.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_SIZENWSE'>SDL_SYSTEM_CURSOR_SIZENWSE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_SIZEWE.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_SIZEWE'>SDL_SYSTEM_CURSOR_SIZEWE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_WAIT.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_WAIT'>SDL_SYSTEM_CURSOR_WAIT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_SYSTEM_CURSOR_WAITARROW.html"
+                                  title='constant sdl2_sys::mouse::SDL_SYSTEM_CURSOR_WAITARROW'>SDL_SYSTEM_CURSOR_WAITARROW</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateColorCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_CreateColorCursor'>SDL_CreateColorCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_CreateCursor'>SDL_CreateCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateSystemCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_CreateSystemCursor'>SDL_CreateSystemCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_FreeCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_FreeCursor'>SDL_FreeCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_GetCursor'>SDL_GetCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetDefaultCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_GetDefaultCursor'>SDL_GetDefaultCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetMouseFocus.html"
+                                  title='fn sdl2_sys::mouse::SDL_GetMouseFocus'>SDL_GetMouseFocus</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetMouseState.html"
+                                  title='fn sdl2_sys::mouse::SDL_GetMouseState'>SDL_GetMouseState</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRelativeMouseMode.html"
+                                  title='fn sdl2_sys::mouse::SDL_GetRelativeMouseMode'>SDL_GetRelativeMouseMode</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRelativeMouseState.html"
+                                  title='fn sdl2_sys::mouse::SDL_GetRelativeMouseState'>SDL_GetRelativeMouseState</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_SetCursor'>SDL_SetCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetRelativeMouseMode.html"
+                                  title='fn sdl2_sys::mouse::SDL_SetRelativeMouseMode'>SDL_SetRelativeMouseMode</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_ShowCursor.html"
+                                  title='fn sdl2_sys::mouse::SDL_ShowCursor'>SDL_ShowCursor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_WarpMouseInWindow.html"
+                                  title='fn sdl2_sys::mouse::SDL_WarpMouseInWindow'>SDL_WarpMouseInWindow</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.SDL_Cursor.html"
+                                  title='type sdl2_sys::mouse::SDL_Cursor'>SDL_Cursor</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.SDL_SystemCursor.html"
+                                  title='type sdl2_sys::mouse::SDL_SystemCursor'>SDL_SystemCursor</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2_sys";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

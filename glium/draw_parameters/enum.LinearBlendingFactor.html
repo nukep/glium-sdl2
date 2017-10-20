@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `LinearBlendingFactor` enum in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, LinearBlendingFactor">
+
+    <title>glium::draw_parameters::LinearBlendingFactor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Enum LinearBlendingFactor</p><div class="block items"><ul><li><a href="#variants">Variants</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>glium</a>::<wbr><a href='index.html'>draw_parameters</a></p><script>window.sidebarCurrent = {name: 'LinearBlendingFactor', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>glium</a>::<wbr><a href='index.html'>draw_parameters</a>::<wbr><a class="enum" href=''>LinearBlendingFactor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#123-181' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum LinearBlendingFactor {
+    Zero,
+    One,
+    SourceColor,
+    OneMinusSourceColor,
+    DestinationColor,
+    OneMinusDestinationColor,
+    SourceAlpha,
+    SourceAlphaSaturate,
+    OneMinusSourceAlpha,
+    DestinationAlpha,
+    OneMinusDestinationAlpha,
+    ConstantColor,
+    OneMinusConstantColor,
+    ConstantAlpha,
+    OneMinusConstantAlpha,
+}</pre><div class='docblock'><p>Indicates which value to multiply each component with.</p>
+</div><h2 id='variants' class='variants small-section-header'>
+                   Variants<a href='#variants' class='anchor'></a></h2>
+<span id="variant.Zero" class="variant small-section-header"><a href="#variant.Zero" class="anchor field"></a><span id='Zero.v' class='invisible'><code>Zero</code></span></span><div class='docblock'><p>Multiply the source or destination component by zero, which always
+gives <code>0.0</code>.</p>
+</div><span id="variant.One" class="variant small-section-header"><a href="#variant.One" class="anchor field"></a><span id='One.v' class='invisible'><code>One</code></span></span><div class='docblock'><p>Multiply the source or destination component by one, which always
+gives you the original value.</p>
+</div><span id="variant.SourceColor" class="variant small-section-header"><a href="#variant.SourceColor" class="anchor field"></a><span id='SourceColor.v' class='invisible'><code>SourceColor</code></span></span><div class='docblock'><p>Multiply the source or destination component by its corresponding value
+in the source.</p>
+
+<p>If you apply this to the source components, you get the values squared.</p>
+</div><span id="variant.OneMinusSourceColor" class="variant small-section-header"><a href="#variant.OneMinusSourceColor" class="anchor field"></a><span id='OneMinusSourceColor.v' class='invisible'><code>OneMinusSourceColor</code></span></span><div class='docblock'><p>Equivalent to <code>1 - SourceColor</code>.</p>
+</div><span id="variant.DestinationColor" class="variant small-section-header"><a href="#variant.DestinationColor" class="anchor field"></a><span id='DestinationColor.v' class='invisible'><code>DestinationColor</code></span></span><div class='docblock'><p>Multiply the source or destination component by its corresponding value
+in the destination.</p>
+
+<p>If you apply this to the destination components, you get the values squared.</p>
+</div><span id="variant.OneMinusDestinationColor" class="variant small-section-header"><a href="#variant.OneMinusDestinationColor" class="anchor field"></a><span id='OneMinusDestinationColor.v' class='invisible'><code>OneMinusDestinationColor</code></span></span><div class='docblock'><p>Equivalent to <code>1 - DestinationColor</code>.</p>
+</div><span id="variant.SourceAlpha" class="variant small-section-header"><a href="#variant.SourceAlpha" class="anchor field"></a><span id='SourceAlpha.v' class='invisible'><code>SourceAlpha</code></span></span><div class='docblock'><p>Multiply the source or destination component by the alpha value of the source.</p>
+</div><span id="variant.SourceAlphaSaturate" class="variant small-section-header"><a href="#variant.SourceAlphaSaturate" class="anchor field"></a><span id='SourceAlphaSaturate.v' class='invisible'><code>SourceAlphaSaturate</code></span></span><div class='docblock'><p>Multiply the source or destination component by the smallest value of
+<code>SourceAlpha</code> and <code>1 - DestinationAlpha</code>.</p>
+</div><span id="variant.OneMinusSourceAlpha" class="variant small-section-header"><a href="#variant.OneMinusSourceAlpha" class="anchor field"></a><span id='OneMinusSourceAlpha.v' class='invisible'><code>OneMinusSourceAlpha</code></span></span><div class='docblock'><p>Multiply the source or destination component by <code>1.0</code> minus the alpha value of the source.</p>
+</div><span id="variant.DestinationAlpha" class="variant small-section-header"><a href="#variant.DestinationAlpha" class="anchor field"></a><span id='DestinationAlpha.v' class='invisible'><code>DestinationAlpha</code></span></span><div class='docblock'><p>Multiply the source or destination component by the alpha value of the destination.</p>
+</div><span id="variant.OneMinusDestinationAlpha" class="variant small-section-header"><a href="#variant.OneMinusDestinationAlpha" class="anchor field"></a><span id='OneMinusDestinationAlpha.v' class='invisible'><code>OneMinusDestinationAlpha</code></span></span><div class='docblock'><p>Multiply the source or destination component by <code>1.0</code> minus the alpha value of the
+destination.</p>
+</div><span id="variant.ConstantColor" class="variant small-section-header"><a href="#variant.ConstantColor" class="anchor field"></a><span id='ConstantColor.v' class='invisible'><code>ConstantColor</code></span></span><div class='docblock'><p>Multiply the source or destination component by the corresponding value
+in <code>Blend::const_value</code>.</p>
+</div><span id="variant.OneMinusConstantColor" class="variant small-section-header"><a href="#variant.OneMinusConstantColor" class="anchor field"></a><span id='OneMinusConstantColor.v' class='invisible'><code>OneMinusConstantColor</code></span></span><div class='docblock'><p>Multiply the source or destination compoent by <code>1.0</code> minus the corresponding
+value in <code>Blend::const_value</code>.</p>
+</div><span id="variant.ConstantAlpha" class="variant small-section-header"><a href="#variant.ConstantAlpha" class="anchor field"></a><span id='ConstantAlpha.v' class='invisible'><code>ConstantAlpha</code></span></span><div class='docblock'><p>Multiply the source or destination component by the alpha value of <code>Blend::const_value</code>.</p>
+</div><span id="variant.OneMinusConstantAlpha" class="variant small-section-header"><a href="#variant.OneMinusConstantAlpha" class="anchor field"></a><span id='OneMinusConstantAlpha.v' class='invisible'><code>OneMinusConstantAlpha</code></span></span><div class='docblock'><p>Multiply the source or destination componet by <code>1.0</code> minus the alpha value of
+<code>Blend::const_value</code>.</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../../glium/enum.LinearBlendingFactor.html" title="enum glium::LinearBlendingFactor">LinearBlendingFactor</a></code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="enum" href="../../glium/enum.LinearBlendingFactor.html" title="enum glium::LinearBlendingFactor">LinearBlendingFactor</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 id='impl-Copy' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a> for <a class="enum" href="../../glium/enum.LinearBlendingFactor.html" title="enum glium::LinearBlendingFactor">LinearBlendingFactor</a></code><a href='#impl-Copy' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="enum" href="../../glium/enum.LinearBlendingFactor.html" title="enum glium::LinearBlendingFactor">LinearBlendingFactor</a></code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 id='impl-PartialEq' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a> for <a class="enum" href="../../glium/enum.LinearBlendingFactor.html" title="enum glium::LinearBlendingFactor">LinearBlendingFactor</a></code><a href='#impl-PartialEq' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class="method"><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../glium/enum.LinearBlendingFactor.html" title="enum glium::LinearBlendingFactor">LinearBlendingFactor</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class="method"><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/cmp.rs.html#121' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 id='impl-Eq' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html" title="trait core::cmp::Eq">Eq</a> for <a class="enum" href="../../glium/enum.LinearBlendingFactor.html" title="enum glium::LinearBlendingFactor">LinearBlendingFactor</a></code><a href='#impl-Eq' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/draw_parameters/blend.rs.html#122' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "glium";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

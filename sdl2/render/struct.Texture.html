@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Texture` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Texture">
+
+    <title>sdl2::render::Texture - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct Texture</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a></p><script>window.sidebarCurrent = {name: 'Texture', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a>::<wbr><a class="struct" href=''>Texture</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2/render.rs.html#1271-1274' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Texture&lt;'r&gt; { /* fields omitted */ }</pre><div class='docblock'><p>A texture for a rendering context.</p>
+
+<p>Every Texture is owned by a <code>TextureCreator</code>.
+A <code>Texture</code> cannot outlive the <code>TextureCreator</code></p>
+
+<p>A <code>Texture</code> can be safely accessed after the <code>Canvas</code> is dropped.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;'r&gt; <a class="struct" href="../../sdl2/render/struct.Texture.html" title="struct sdl2::render::Texture">Texture</a>&lt;'r&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1425-1801' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.query' class="method"><span id='query.v' class='invisible'><code>pub fn <a href='#method.query' class='fnname'>query</a>(&amp;self) -&gt; <a class="struct" href="../../sdl2/render/struct.TextureQuery.html" title="struct sdl2::render::TextureQuery">TextureQuery</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1427-1447' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Queries the attributes of the texture.</p>
+</div><h4 id='method.set_color_mod' class="method"><span id='set_color_mod.v' class='invisible'><code>pub fn <a href='#method.set_color_mod' class='fnname'>set_color_mod</a>(&amp;mut self, red: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>, green: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>, blue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1450-1456' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets an additional color value multiplied into render copy operations.</p>
+</div><h4 id='method.color_mod' class="method"><span id='color_mod.v' class='invisible'><code>pub fn <a href='#method.color_mod' class='fnname'>color_mod</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">(</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">)</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1459-1469' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets the additional color value multiplied into render copy operations.</p>
+</div><h4 id='method.set_alpha_mod' class="method"><span id='set_alpha_mod.v' class='invisible'><code>pub fn <a href='#method.set_alpha_mod' class='fnname'>set_alpha_mod</a>(&amp;mut self, alpha: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1472-1478' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets an additional alpha value multiplied into render copy operations.</p>
+</div><h4 id='method.alpha_mod' class="method"><span id='alpha_mod.v' class='invisible'><code>pub fn <a href='#method.alpha_mod' class='fnname'>alpha_mod</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1481-1487' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets the additional alpha value multiplied into render copy operations.</p>
+</div><h4 id='method.set_blend_mode' class="method"><span id='set_blend_mode.v' class='invisible'><code>pub fn <a href='#method.set_blend_mode' class='fnname'>set_blend_mode</a>(&amp;mut self, blend: <a class="enum" href="../../sdl2/render/enum.BlendMode.html" title="enum sdl2::render::BlendMode">BlendMode</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1490-1498' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets the blend mode for a texture, used by <code>Renderer::copy()</code>.</p>
+</div><h4 id='method.blend_mode' class="method"><span id='blend_mode.v' class='invisible'><code>pub fn <a href='#method.blend_mode' class='fnname'>blend_mode</a>(&amp;self) -&gt; <a class="enum" href="../../sdl2/render/enum.BlendMode.html" title="enum sdl2::render::BlendMode">BlendMode</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1501-1511' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets the blend mode used for texture copy operations.</p>
+</div><h4 id='method.update' class="method"><span id='update.v' class='invisible'><code>pub fn <a href='#method.update' class='fnname'>update</a>&lt;R&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;rect: R, <br>&nbsp;&nbsp;&nbsp;&nbsp;pixel_data: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;pitch: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="enum" href="../../sdl2/render/enum.UpdateTextureError.html" title="enum sdl2::render::UpdateTextureError">UpdateTextureError</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;R: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../sdl2/rect/struct.Rect.html" title="struct sdl2::rect::Rect">Rect</a>&gt;&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1519-1578' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Updates the given texture rectangle with new pixel data.</p>
+
+<p><code>pitch</code> is the number of bytes in a row of pixel data, including padding
+between lines</p>
+
+<ul>
+<li>If <code>rect</code> is <code>None</code>, the entire texture is updated.</li>
+</ul>
+</div><h4 id='method.update_yuv' class="method"><span id='update_yuv.v' class='invisible'><code>pub fn <a href='#method.update_yuv' class='fnname'>update_yuv</a>&lt;R&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;rect: R, <br>&nbsp;&nbsp;&nbsp;&nbsp;y_plane: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;y_pitch: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;u_plane: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;u_pitch: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;v_plane: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;v_pitch: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="enum" href="../../sdl2/render/enum.UpdateTextureYUVError.html" title="enum sdl2::render::UpdateTextureYUVError">UpdateTextureYUVError</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;R: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../sdl2/rect/struct.Rect.html" title="struct sdl2::rect::Rect">Rect</a>&gt;&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1581-1707' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Updates a rectangle within a planar YV12 or IYUV texture with new pixel data.</p>
+</div><h4 id='method.with_lock' class="method"><span id='with_lock.v' class='invisible'><code>pub fn <a href='#method.with_lock' class='fnname'>with_lock</a>&lt;F, R, R2&gt;(&amp;mut self, rect: R2, func: F) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;R, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;F: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnOnce.html" title="trait core::ops::function::FnOnce">FnOnce</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;mut [</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; R,<br>&nbsp;&nbsp;&nbsp;&nbsp;R2: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../sdl2/rect/struct.Rect.html" title="struct sdl2::rect::Rect">Rect</a>&gt;&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1719-1755' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Locks the texture for <strong>write-only</strong> pixel access.
+The texture must have been created with streaming access.</p>
+
+<p><code>F</code> is a function that is passed the write-only texture buffer,
+and the pitch of the texture (size of a row in bytes).</p>
+
+<h1 id='remarks' class='section-header'><a href='#remarks'>Remarks</a></h1>
+<p>As an optimization, the pixels made available for editing don&#39;t
+necessarily contain the old texture data.
+This is a write-only operation, and if you need to keep a copy of the
+texture data you should do that at the application level.</p>
+</div><h4 id='method.gl_bind_texture' class="method"><span id='gl_bind_texture.v' class='invisible'><code>pub unsafe fn <a href='#method.gl_bind_texture' class='fnname'>gl_bind_texture</a>(&amp;mut self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">(</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">)</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1759-1768' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Binds an OpenGL/ES/ES2 texture to the current
+context for use with when rendering OpenGL primitives directly.</p>
+</div><h4 id='method.gl_unbind_texture' class="method"><span id='gl_unbind_texture.v' class='invisible'><code>pub unsafe fn <a href='#method.gl_unbind_texture' class='fnname'>gl_unbind_texture</a>(&amp;mut self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1771-1775' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Unbinds an OpenGL/ES/ES2 texture from the current context.</p>
+</div><h4 id='method.gl_with_bind' class="method"><span id='gl_with_bind.v' class='invisible'><code>pub fn <a href='#method.gl_with_bind' class='fnname'>gl_with_bind</a>&lt;R, F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnOnce.html" title="trait core::ops::function::FnOnce">FnOnce</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>) -&gt; R&gt;(&amp;mut self, f: F) -&gt; R</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1778-1796' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Binds and unbinds an OpenGL/ES/ES2 texture from the current context.</p>
+</div><h4 id='method.raw' class="method"><span id='raw.v' class='invisible'><code>pub fn <a href='#method.raw' class='fnname'>raw</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../sdl2_sys/render/struct.SDL_Texture.html" title="struct sdl2_sys::render::SDL_Texture">SDL_Texture</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1798-1800' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Drop' class='impl'><span class='in-band'><code>impl&lt;'r&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html" title="trait core::ops::drop::Drop">Drop</a> for <a class="struct" href="../../sdl2/render/struct.Texture.html" title="struct sdl2::render::Texture">Texture</a>&lt;'r&gt;</code><a href='#impl-Drop' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1276-1282' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class="method"><span id='drop.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#1277-1281' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Executes the destructor for this type. <a href="https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

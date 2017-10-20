@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["SDL_GetNumTouchDevices",""],["SDL_GetNumTouchFingers",""],["SDL_GetTouchDevice",""],["SDL_GetTouchFinger",""]],"struct":[["Finger",""]],"type":[["SDL_Finger",""],["SDL_FingerID",""],["SDL_TouchID",""],["TouchDevice",""]]});

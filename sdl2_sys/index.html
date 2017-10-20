@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `sdl2_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, sdl2_sys">
+
+    <title>sdl2_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate sdl2_sys</p><div class="block items"><ul><li><a href="#reexports">Reexports</a></li><li><a href="#modules">Modules</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'sdl2_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>sdl2_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/sdl2_sys/lib.rs.html#1-62' title='goto source code'>[src]</a></span></h1>
+<h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use <a class="mod" href="../sdl2_sys/scancode/index.html" title="mod sdl2_sys::scancode">scancode</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/keycode/index.html" title="mod sdl2_sys::keycode">keycode</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/audio/index.html" title="mod sdl2_sys::audio">audio</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/clipboard/index.html" title="mod sdl2_sys::clipboard">clipboard</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/controller/index.html" title="mod sdl2_sys::controller">controller</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/cpuinfo/index.html" title="mod sdl2_sys::cpuinfo">cpuinfo</a>::*;</code></td></tr><tr><td><code>pub use event::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/filesystem/index.html" title="mod sdl2_sys::filesystem">filesystem</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/haptic/index.html" title="mod sdl2_sys::haptic">haptic</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/gesture/index.html" title="mod sdl2_sys::gesture">gesture</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/joystick/index.html" title="mod sdl2_sys::joystick">joystick</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/keyboard/index.html" title="mod sdl2_sys::keyboard">keyboard</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/messagebox/index.html" title="mod sdl2_sys::messagebox">messagebox</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/rect/index.html" title="mod sdl2_sys::rect">rect</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/pixels/index.html" title="mod sdl2_sys::pixels">pixels</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/render/index.html" title="mod sdl2_sys::render">render</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/rwops/index.html" title="mod sdl2_sys::rwops">rwops</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/surface/index.html" title="mod sdl2_sys::surface">surface</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/touch/index.html" title="mod sdl2_sys::touch">touch</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/video/index.html" title="mod sdl2_sys::video">video</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/mouse/index.html" title="mod sdl2_sys::mouse">mouse</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/sdl/index.html" title="mod sdl2_sys::sdl">sdl</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/timer/index.html" title="mod sdl2_sys::timer">timer</a>::*;</code></td></tr><tr><td><code>pub use version::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/hint/index.html" title="mod sdl2_sys::hint">hint</a>::*;</code></td></tr><tr><td><code>pub use <a class="mod" href="../sdl2_sys/log/index.html" title="mod sdl2_sys::log">log</a>::*;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="audio/index.html"
+                                  title='mod sdl2_sys::audio'>audio</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="clipboard/index.html"
+                                  title='mod sdl2_sys::clipboard'>clipboard</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="controller/index.html"
+                                  title='mod sdl2_sys::controller'>controller</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="cpuinfo/index.html"
+                                  title='mod sdl2_sys::cpuinfo'>cpuinfo</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="filesystem/index.html"
+                                  title='mod sdl2_sys::filesystem'>filesystem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="gesture/index.html"
+                                  title='mod sdl2_sys::gesture'>gesture</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="haptic/index.html"
+                                  title='mod sdl2_sys::haptic'>haptic</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="hint/index.html"
+                                  title='mod sdl2_sys::hint'>hint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="joystick/index.html"
+                                  title='mod sdl2_sys::joystick'>joystick</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="keyboard/index.html"
+                                  title='mod sdl2_sys::keyboard'>keyboard</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="keycode/index.html"
+                                  title='mod sdl2_sys::keycode'>keycode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="log/index.html"
+                                  title='mod sdl2_sys::log'>log</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="messagebox/index.html"
+                                  title='mod sdl2_sys::messagebox'>messagebox</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="mouse/index.html"
+                                  title='mod sdl2_sys::mouse'>mouse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="pixels/index.html"
+                                  title='mod sdl2_sys::pixels'>pixels</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rect/index.html"
+                                  title='mod sdl2_sys::rect'>rect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="render/index.html"
+                                  title='mod sdl2_sys::render'>render</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rwops/index.html"
+                                  title='mod sdl2_sys::rwops'>rwops</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="scancode/index.html"
+                                  title='mod sdl2_sys::scancode'>scancode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="sdl/index.html"
+                                  title='mod sdl2_sys::sdl'>sdl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="surface/index.html"
+                                  title='mod sdl2_sys::surface'>surface</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="timer/index.html"
+                                  title='mod sdl2_sys::timer'>timer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="touch/index.html"
+                                  title='mod sdl2_sys::touch'>touch</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="video/index.html"
+                                  title='mod sdl2_sys::video'>video</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "sdl2_sys";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

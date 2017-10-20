@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `VertexBufferAny` struct in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, VertexBufferAny">
+
+    <title>glium::vertex::VertexBufferAny - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct VertexBufferAny</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>glium</a>::<wbr><a href='index.html'>vertex</a></p><script>window.sidebarCurrent = {name: 'VertexBufferAny', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>glium</a>::<wbr><a href='index.html'>vertex</a>::<wbr><a class="struct" href=''>VertexBufferAny</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#440-443' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct VertexBufferAny { /* fields omitted */ }</pre><div class='docblock'><p>A list of vertices loaded in the graphics card&#39;s memory.</p>
+
+<p>Contrary to <code>VertexBuffer</code>, this struct doesn&#39;t know about the type of data
+inside the buffer. Therefore you can&#39;t map or read it.</p>
+
+<p>This struct is provided for convenience, so that you can have a <code>Vec&lt;VertexBufferAny&gt;</code>,
+or return a <code>VertexBufferAny</code> instead of a <code>VertexBuffer&lt;MyPrivateVertexType&gt;</code>.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../glium/vertex/struct.VertexBufferAny.html" title="struct glium::vertex::VertexBufferAny">VertexBufferAny</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#445-487' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_elements_size' class="method"><span id='get_elements_size.v' class='invisible'><code>pub fn <a href='#method.get_elements_size' class='fnname'>get_elements_size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#448-450' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the number of bytes between two consecutive elements in the buffer.</p>
+</div><h4 id='method.len' class="method"><span id='len.v' class='invisible'><code>pub fn <a href='#method.len' class='fnname'>len</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#454-456' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the number of elements in the buffer.</p>
+</div><h4 id='method.get_bindings' class="method"><span id='get_bindings.v' class='invisible'><code>pub fn <a href='#method.get_bindings' class='fnname'>get_bindings</a>(&amp;self) -&gt; &amp;<a class="type" href="../../glium/vertex/type.VertexFormat.html" title="type glium::vertex::VertexFormat">VertexFormat</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#460-462' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the associated <code>VertexFormat</code>.</p>
+</div><h4 id='method.into_vertex_buffer' class="method"><span id='into_vertex_buffer.v' class='invisible'><code>pub unsafe fn <a href='#method.into_vertex_buffer' class='fnname'>into_vertex_buffer</a>&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a>&gt;(self) -&gt; <a class="struct" href="../../glium/struct.VertexBuffer.html" title="struct glium::VertexBuffer">VertexBuffer</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#466-468' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Turns the vertex buffer into a <code>VertexBuffer</code> without checking the type.</p>
+</div><h4 id='method.per_instance' class="method"><span id='per_instance.v' class='invisible'><code>pub fn <a href='#method.per_instance' class='fnname'>per_instance</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../glium/vertex/struct.PerInstance.html" title="struct glium::vertex::PerInstance">PerInstance</a>, InstancingNotSupported&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#477-486' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates a marker that instructs glium to use multiple instances.</p>
+
+<p>Instead of calling <code>surface.draw(&amp;vertex_buffer, ...)</code> you can call
+<code>surface.draw(vertex_buffer.per_instance(), ...)</code>. This will draw one instance of the
+geometry for each element in this buffer. The attributes are still passed to the
+vertex shader, but each entry is passed for each different instance.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../../glium/vertex/struct.VertexBufferAny.html" title="struct glium::vertex::VertexBufferAny">VertexBufferAny</a></code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#439' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#439' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 id='impl-From&lt;VertexBuffer&lt;T&gt;&gt;' class='impl'><span class='in-band'><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../../glium/struct.VertexBuffer.html" title="struct glium::VertexBuffer">VertexBuffer</a>&lt;T&gt;&gt; for <a class="struct" href="../../glium/vertex/struct.VertexBufferAny.html" title="struct glium::vertex::VertexBufferAny">VertexBufferAny</a> <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a> + <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> + 'static,&nbsp;</span></code><a href='#impl-From&lt;VertexBuffer&lt;T&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#489-494' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(buf: <a class="struct" href="../../glium/struct.VertexBuffer.html" title="struct glium::VertexBuffer">VertexBuffer</a>&lt;T&gt;) -&gt; <a class="struct" href="../../glium/vertex/struct.VertexBufferAny.html" title="struct glium::vertex::VertexBufferAny">VertexBufferAny</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#491-493' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From&lt;Buffer&lt;[T]&gt;&gt;' class='impl'><span class='in-band'><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../../glium/buffer/struct.Buffer.html" title="struct glium::buffer::Buffer">Buffer</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a>T<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;&gt; for <a class="struct" href="../../glium/vertex/struct.VertexBufferAny.html" title="struct glium::vertex::VertexBufferAny">VertexBufferAny</a> <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../../glium/vertex/trait.Vertex.html" title="trait glium::vertex::Vertex">Vertex</a> + <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a> + <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> + 'static,&nbsp;</span></code><a href='#impl-From&lt;Buffer&lt;[T]&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#496-502' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class="method"><span id='from.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(buf: <a class="struct" href="../../glium/buffer/struct.Buffer.html" title="struct glium::buffer::Buffer">Buffer</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a>T<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;) -&gt; <a class="struct" href="../../glium/vertex/struct.VertexBufferAny.html" title="struct glium::vertex::VertexBufferAny">VertexBufferAny</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#498-501' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-IntoVerticesSource&lt;&#39;a&gt;' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="trait" href="../../glium/vertex/trait.IntoVerticesSource.html" title="trait glium::vertex::IntoVerticesSource">IntoVerticesSource</a>&lt;'a&gt; for &amp;'a <a class="struct" href="../../glium/vertex/struct.VertexBufferAny.html" title="struct glium::vertex::VertexBufferAny">VertexBufferAny</a></code><a href='#impl-IntoVerticesSource&lt;&#39;a&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#504-509' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into_vertices_source' class="method"><span id='into_vertices_source.v' class='invisible'><code>fn <a href='../../glium/vertex/trait.IntoVerticesSource.html#tymethod.into_vertices_source' class='fnname'>into_vertices_source</a>(self) -&gt; <a class="enum" href="../../glium/vertex/enum.VerticesSource.html" title="enum glium::vertex::VerticesSource">VerticesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/vertex/buffer.rs.html#506-508' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Builds the <code>VerticesSource</code>.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "glium";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

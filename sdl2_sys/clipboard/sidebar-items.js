@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["SDL_GetClipboardText",""],["SDL_HasClipboardText",""],["SDL_SetClipboardText",""]]});

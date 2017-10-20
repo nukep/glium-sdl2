@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CanvasBuilder` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CanvasBuilder">
+
+    <title>sdl2::render::CanvasBuilder - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct CanvasBuilder</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a></p><script>window.sidebarCurrent = {name: 'CanvasBuilder', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a>::<wbr><a class="struct" href=''>CanvasBuilder</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2/render.rs.html#594-598' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct CanvasBuilder { /* fields omitted */ }</pre><div class='docblock'><p>The type that allows you to build Window-based renderers.</p>
+
+<p>By default, the renderer builder will prioritize for a hardware-accelerated
+renderer, which is porbably what you want.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#600-670' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(window: <a class="struct" href="../../sdl2/video/struct.Window.html" title="struct sdl2::video::Window">Window</a>) -&gt; <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#602-612' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initializes a new <code>CanvasBuilder</code>.</p>
+</div><h4 id='method.build' class="method"><span id='build.v' class='invisible'><code>pub fn <a href='#method.build' class='fnname'>build</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="type" href="../../sdl2/render/type.WindowCanvas.html" title="type sdl2::render::WindowCanvas">WindowCanvas</a>, <a class="enum" href="../../sdl2/enum.IntegerOrSdlError.html" title="enum sdl2::IntegerOrSdlError">IntegerOrSdlError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#615-632' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Builds the renderer.</p>
+</div><h4 id='method.index' class="method"><span id='index.v' class='invisible'><code>pub fn <a href='#method.index' class='fnname'>index</a>(self, index: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#638-641' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets the index of the rendering driver to initialize.
+If you desire the first rendering driver to support the flags provided,
+or if you&#39;re translating code from C which passes -1 for the index,
+<strong>do not</strong> invoke the <code>index</code> method.</p>
+</div><h4 id='method.software' class="method"><span id='software.v' class='invisible'><code>pub fn <a href='#method.software' class='fnname'>software</a>(self) -&gt; <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#645-648' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the renderer to a software fallback.
+This flag is accumulative, and may be specified with other flags.</p>
+</div><h4 id='method.accelerated' class="method"><span id='accelerated.v' class='invisible'><code>pub fn <a href='#method.accelerated' class='fnname'>accelerated</a>(self) -&gt; <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#652-655' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the renderer to use hardware acceleration.
+This flag is accumulative, and may be specified with other flags.</p>
+</div><h4 id='method.present_vsync' class="method"><span id='present_vsync.v' class='invisible'><code>pub fn <a href='#method.present_vsync' class='fnname'>present_vsync</a>(self) -&gt; <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#659-662' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Synchronize renderer <code>present</code> method calls with the refresh rate.
+This flag is accumulative, and may be specified with other flags.</p>
+</div><h4 id='method.target_texture' class="method"><span id='target_texture.v' class='invisible'><code>pub fn <a href='#method.target_texture' class='fnname'>target_texture</a>(self) -&gt; <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/render.rs.html#666-669' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the renderer to support rendering to a texture.
+This flag is accumulative, and may be specified with other flags.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-From&lt;Window&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../../sdl2/video/struct.Window.html" title="struct sdl2::video::Window">Window</a>&gt; for <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code><a href='#impl-From&lt;Window&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/video.rs.html#964-968' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(window: <a class="struct" href="../../sdl2/video/struct.Window.html" title="struct sdl2::video::Window">Window</a>) -&gt; <a class="struct" href="../../sdl2/render/struct.CanvasBuilder.html" title="struct sdl2::render::CanvasBuilder">CanvasBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/video.rs.html#965-967' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `AudioQueue` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AudioQueue">
+
+    <title>sdl2::audio::AudioQueue - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct AudioQueue</p><div class="block items"><ul><li><a href="#methods">Methods</a></li></ul></div><p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>audio</a></p><script>window.sidebarCurrent = {name: 'AudioQueue', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>audio</a>::<wbr><a class="struct" href=''>AudioQueue</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2/audio.rs.html#498-503' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct AudioQueue&lt;Channel:&nbsp;<a class="trait" href="../../sdl2/audio/trait.AudioFormatNum.html" title="trait sdl2::audio::AudioFormatNum">AudioFormatNum</a>&gt; { /* fields omitted */ }</pre><div class='docblock'><p>Wraps SDL_AudioDeviceID and owns the callback data used by the audio device.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;'a, Channel:&nbsp;<a class="trait" href="../../sdl2/audio/trait.AudioFormatNum.html" title="trait sdl2::audio::AudioFormatNum">AudioFormatNum</a>&gt; <a class="struct" href="../../sdl2/audio/struct.AudioQueue.html" title="struct sdl2::audio::AudioQueue">AudioQueue</a>&lt;Channel&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#505-579' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.open_queue' class="method"><span id='open_queue.v' class='invisible'><code>pub fn <a href='#method.open_queue' class='fnname'>open_queue</a>&lt;D:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;'a <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;a: &amp;<a class="struct" href="../../sdl2/struct.AudioSubsystem.html" title="struct sdl2::AudioSubsystem">AudioSubsystem</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;device: D, <br>&nbsp;&nbsp;&nbsp;&nbsp;spec: &amp;<a class="struct" href="../../sdl2/audio/struct.AudioSpecDesired.html" title="struct sdl2::audio::AudioSpecDesired">AudioSpecDesired</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../sdl2/audio/struct.AudioQueue.html" title="struct sdl2::audio::AudioQueue">AudioQueue</a>&lt;Channel&gt;, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#507-540' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Opens a new audio device given the desired parameters and callback.</p>
+</div><h4 id='method.subsystem' class="method"><span id='subsystem.v' class='invisible'><code>pub fn <a href='#method.subsystem' class='fnname'>subsystem</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../sdl2/struct.AudioSubsystem.html" title="struct sdl2::AudioSubsystem">AudioSubsystem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#543' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.spec' class="method"><span id='spec.v' class='invisible'><code>pub fn <a href='#method.spec' class='fnname'>spec</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../sdl2/audio/struct.AudioSpec.html" title="struct sdl2::audio::AudioSpec">AudioSpec</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#546' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.status' class="method"><span id='status.v' class='invisible'><code>pub fn <a href='#method.status' class='fnname'>status</a>(&amp;self) -&gt; <a class="enum" href="../../sdl2/audio/enum.AudioStatus.html" title="enum sdl2::audio::AudioStatus">AudioStatus</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#548-553' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.pause' class="method"><span id='pause.v' class='invisible'><code>pub fn <a href='#method.pause' class='fnname'>pause</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#556-558' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Pauses playback of the audio device.</p>
+</div><h4 id='method.resume' class="method"><span id='resume.v' class='invisible'><code>pub fn <a href='#method.resume' class='fnname'>resume</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#561-563' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Starts playback of the audio device.</p>
+</div><h4 id='method.queue' class="method"><span id='queue.v' class='invisible'><code>pub fn <a href='#method.queue' class='fnname'>queue</a>(&amp;self, data: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[Channel]</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#566-569' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Adds data to the audio queue.</p>
+</div><h4 id='method.size' class="method"><span id='size.v' class='invisible'><code>pub fn <a href='#method.size' class='fnname'>size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#571-573' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.clear' class="method"><span id='clear.v' class='invisible'><code>pub fn <a href='#method.clear' class='fnname'>clear</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/audio.rs.html#576-578' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Clears all data from the current audio queue.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

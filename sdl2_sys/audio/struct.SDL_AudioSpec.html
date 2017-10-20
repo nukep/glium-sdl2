@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SDL_AudioSpec` struct in crate `sdl2_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SDL_AudioSpec">
+
+    <title>sdl2_sys::audio::SDL_AudioSpec - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct SDL_AudioSpec</p><div class="block items"><ul><li><a href="#fields">Fields</a></li></ul></div><p class='location'><a href='../index.html'>sdl2_sys</a>::<wbr><a href='index.html'>audio</a></p><script>window.sidebarCurrent = {name: 'SDL_AudioSpec', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2_sys</a>::<wbr><a href='index.html'>audio</a>::<wbr><a class="struct" href=''>SDL_AudioSpec</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2_sys/audio.rs.html#32-42' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct SDL_AudioSpec {
+    pub freq: <a class="type" href="../../libc/type.c_int.html" title="type libc::c_int">c_int</a>,
+    pub format: <a class="type" href="../../sdl2_sys/audio/type.SDL_AudioFormat.html" title="type sdl2_sys::audio::SDL_AudioFormat">SDL_AudioFormat</a>,
+    pub channels: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub silence: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>,
+    pub samples: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>,
+    pub padding: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>,
+    pub size: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>,
+    pub callback: <a class="type" href="../../sdl2_sys/audio/type.SDL_AudioCallback.html" title="type sdl2_sys::audio::SDL_AudioCallback">SDL_AudioCallback</a>,
+    pub userdata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a>,
+}</pre><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.freq" class="structfield small-section-header">
+                           <a href="#structfield.freq" class="anchor field"></a>
+                           <span id="freq.v" class='invisible'>
+                           <code>freq: <a class="type" href="../../libc/type.c_int.html" title="type libc::c_int">c_int</a></code>
+                           </span></span><span id="structfield.format" class="structfield small-section-header">
+                           <a href="#structfield.format" class="anchor field"></a>
+                           <span id="format.v" class='invisible'>
+                           <code>format: <a class="type" href="../../sdl2_sys/audio/type.SDL_AudioFormat.html" title="type sdl2_sys::audio::SDL_AudioFormat">SDL_AudioFormat</a></code>
+                           </span></span><span id="structfield.channels" class="structfield small-section-header">
+                           <a href="#structfield.channels" class="anchor field"></a>
+                           <span id="channels.v" class='invisible'>
+                           <code>channels: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.silence" class="structfield small-section-header">
+                           <a href="#structfield.silence" class="anchor field"></a>
+                           <span id="silence.v" class='invisible'>
+                           <code>silence: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a></code>
+                           </span></span><span id="structfield.samples" class="structfield small-section-header">
+                           <a href="#structfield.samples" class="anchor field"></a>
+                           <span id="samples.v" class='invisible'>
+                           <code>samples: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a></code>
+                           </span></span><span id="structfield.padding" class="structfield small-section-header">
+                           <a href="#structfield.padding" class="anchor field"></a>
+                           <span id="padding.v" class='invisible'>
+                           <code>padding: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a></code>
+                           </span></span><span id="structfield.size" class="structfield small-section-header">
+                           <a href="#structfield.size" class="anchor field"></a>
+                           <span id="size.v" class='invisible'>
+                           <code>size: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a></code>
+                           </span></span><span id="structfield.callback" class="structfield small-section-header">
+                           <a href="#structfield.callback" class="anchor field"></a>
+                           <span id="callback.v" class='invisible'>
+                           <code>callback: <a class="type" href="../../sdl2_sys/audio/type.SDL_AudioCallback.html" title="type sdl2_sys::audio::SDL_AudioCallback">SDL_AudioCallback</a></code>
+                           </span></span><span id="structfield.userdata" class="structfield small-section-header">
+                           <a href="#structfield.userdata" class="anchor field"></a>
+                           <span id="userdata.v" class='invisible'>
+                           <code>userdata: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a></code>
+                           </span></span></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2_sys";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

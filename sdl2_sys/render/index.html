@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `render` mod in crate `sdl2_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, render">
+
+    <title>sdl2_sys::render - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Module render</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#constants">Constants</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'><a href='../index.html'>sdl2_sys</a></p><script>window.sidebarCurrent = {name: 'render', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>sdl2_sys</a>::<wbr><a class="mod" href=''>render</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2_sys/render.rs.html#1-110' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SDL_Renderer.html"
+                                  title='struct sdl2_sys::render::SDL_Renderer'>SDL_Renderer</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SDL_RendererInfo.html"
+                                  title='struct sdl2_sys::render::SDL_RendererInfo'>SDL_RendererInfo</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SDL_Texture.html"
+                                  title='struct sdl2_sys::render::SDL_Texture'>SDL_Texture</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BLENDMODE_ADD.html"
+                                  title='constant sdl2_sys::render::SDL_BLENDMODE_ADD'>SDL_BLENDMODE_ADD</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BLENDMODE_BLEND.html"
+                                  title='constant sdl2_sys::render::SDL_BLENDMODE_BLEND'>SDL_BLENDMODE_BLEND</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BLENDMODE_MOD.html"
+                                  title='constant sdl2_sys::render::SDL_BLENDMODE_MOD'>SDL_BLENDMODE_MOD</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_BLENDMODE_NONE.html"
+                                  title='constant sdl2_sys::render::SDL_BLENDMODE_NONE'>SDL_BLENDMODE_NONE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_FLIP_HORIZONTAL.html"
+                                  title='constant sdl2_sys::render::SDL_FLIP_HORIZONTAL'>SDL_FLIP_HORIZONTAL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_FLIP_NONE.html"
+                                  title='constant sdl2_sys::render::SDL_FLIP_NONE'>SDL_FLIP_NONE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_FLIP_VERTICAL.html"
+                                  title='constant sdl2_sys::render::SDL_FLIP_VERTICAL'>SDL_FLIP_VERTICAL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_RENDERER_ACCELERATED.html"
+                                  title='constant sdl2_sys::render::SDL_RENDERER_ACCELERATED'>SDL_RENDERER_ACCELERATED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_RENDERER_PRESENTVSYNC.html"
+                                  title='constant sdl2_sys::render::SDL_RENDERER_PRESENTVSYNC'>SDL_RENDERER_PRESENTVSYNC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_RENDERER_SOFTWARE.html"
+                                  title='constant sdl2_sys::render::SDL_RENDERER_SOFTWARE'>SDL_RENDERER_SOFTWARE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_RENDERER_TARGETTEXTURE.html"
+                                  title='constant sdl2_sys::render::SDL_RENDERER_TARGETTEXTURE'>SDL_RENDERER_TARGETTEXTURE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_TEXTUREACCESS_STATIC.html"
+                                  title='constant sdl2_sys::render::SDL_TEXTUREACCESS_STATIC'>SDL_TEXTUREACCESS_STATIC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_TEXTUREACCESS_STREAMING.html"
+                                  title='constant sdl2_sys::render::SDL_TEXTUREACCESS_STREAMING'>SDL_TEXTUREACCESS_STREAMING</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_TEXTUREACCESS_TARGET.html"
+                                  title='constant sdl2_sys::render::SDL_TEXTUREACCESS_TARGET'>SDL_TEXTUREACCESS_TARGET</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_TEXTUREMODULATE_ALPHA.html"
+                                  title='constant sdl2_sys::render::SDL_TEXTUREMODULATE_ALPHA'>SDL_TEXTUREMODULATE_ALPHA</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_TEXTUREMODULATE_COLOR.html"
+                                  title='constant sdl2_sys::render::SDL_TEXTUREMODULATE_COLOR'>SDL_TEXTUREMODULATE_COLOR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SDL_TEXTUREMODULATE_NONE.html"
+                                  title='constant sdl2_sys::render::SDL_TEXTUREMODULATE_NONE'>SDL_TEXTUREMODULATE_NONE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateRenderer.html"
+                                  title='fn sdl2_sys::render::SDL_CreateRenderer'>SDL_CreateRenderer</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateSoftwareRenderer.html"
+                                  title='fn sdl2_sys::render::SDL_CreateSoftwareRenderer'>SDL_CreateSoftwareRenderer</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateTexture.html"
+                                  title='fn sdl2_sys::render::SDL_CreateTexture'>SDL_CreateTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateTextureFromSurface.html"
+                                  title='fn sdl2_sys::render::SDL_CreateTextureFromSurface'>SDL_CreateTextureFromSurface</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_CreateWindowAndRenderer.html"
+                                  title='fn sdl2_sys::render::SDL_CreateWindowAndRenderer'>SDL_CreateWindowAndRenderer</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_DestroyRenderer.html"
+                                  title='fn sdl2_sys::render::SDL_DestroyRenderer'>SDL_DestroyRenderer</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_DestroyTexture.html"
+                                  title='fn sdl2_sys::render::SDL_DestroyTexture'>SDL_DestroyTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GL_BindTexture.html"
+                                  title='fn sdl2_sys::render::SDL_GL_BindTexture'>SDL_GL_BindTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GL_UnbindTexture.html"
+                                  title='fn sdl2_sys::render::SDL_GL_UnbindTexture'>SDL_GL_UnbindTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetNumRenderDrivers.html"
+                                  title='fn sdl2_sys::render::SDL_GetNumRenderDrivers'>SDL_GetNumRenderDrivers</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRenderDrawBlendMode.html"
+                                  title='fn sdl2_sys::render::SDL_GetRenderDrawBlendMode'>SDL_GetRenderDrawBlendMode</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRenderDrawColor.html"
+                                  title='fn sdl2_sys::render::SDL_GetRenderDrawColor'>SDL_GetRenderDrawColor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRenderDriverInfo.html"
+                                  title='fn sdl2_sys::render::SDL_GetRenderDriverInfo'>SDL_GetRenderDriverInfo</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRenderTarget.html"
+                                  title='fn sdl2_sys::render::SDL_GetRenderTarget'>SDL_GetRenderTarget</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRenderer.html"
+                                  title='fn sdl2_sys::render::SDL_GetRenderer'>SDL_GetRenderer</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRendererInfo.html"
+                                  title='fn sdl2_sys::render::SDL_GetRendererInfo'>SDL_GetRendererInfo</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetRendererOutputSize.html"
+                                  title='fn sdl2_sys::render::SDL_GetRendererOutputSize'>SDL_GetRendererOutputSize</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetTextureAlphaMod.html"
+                                  title='fn sdl2_sys::render::SDL_GetTextureAlphaMod'>SDL_GetTextureAlphaMod</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetTextureBlendMode.html"
+                                  title='fn sdl2_sys::render::SDL_GetTextureBlendMode'>SDL_GetTextureBlendMode</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_GetTextureColorMod.html"
+                                  title='fn sdl2_sys::render::SDL_GetTextureColorMod'>SDL_GetTextureColorMod</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_LockTexture.html"
+                                  title='fn sdl2_sys::render::SDL_LockTexture'>SDL_LockTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_QueryTexture.html"
+                                  title='fn sdl2_sys::render::SDL_QueryTexture'>SDL_QueryTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderClear.html"
+                                  title='fn sdl2_sys::render::SDL_RenderClear'>SDL_RenderClear</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderCopy.html"
+                                  title='fn sdl2_sys::render::SDL_RenderCopy'>SDL_RenderCopy</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderCopyEx.html"
+                                  title='fn sdl2_sys::render::SDL_RenderCopyEx'>SDL_RenderCopyEx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderDrawLine.html"
+                                  title='fn sdl2_sys::render::SDL_RenderDrawLine'>SDL_RenderDrawLine</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderDrawLines.html"
+                                  title='fn sdl2_sys::render::SDL_RenderDrawLines'>SDL_RenderDrawLines</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderDrawPoint.html"
+                                  title='fn sdl2_sys::render::SDL_RenderDrawPoint'>SDL_RenderDrawPoint</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderDrawPoints.html"
+                                  title='fn sdl2_sys::render::SDL_RenderDrawPoints'>SDL_RenderDrawPoints</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderDrawRect.html"
+                                  title='fn sdl2_sys::render::SDL_RenderDrawRect'>SDL_RenderDrawRect</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderDrawRects.html"
+                                  title='fn sdl2_sys::render::SDL_RenderDrawRects'>SDL_RenderDrawRects</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderFillRect.html"
+                                  title='fn sdl2_sys::render::SDL_RenderFillRect'>SDL_RenderFillRect</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderFillRects.html"
+                                  title='fn sdl2_sys::render::SDL_RenderFillRects'>SDL_RenderFillRects</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderGetClipRect.html"
+                                  title='fn sdl2_sys::render::SDL_RenderGetClipRect'>SDL_RenderGetClipRect</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderGetLogicalSize.html"
+                                  title='fn sdl2_sys::render::SDL_RenderGetLogicalSize'>SDL_RenderGetLogicalSize</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderGetScale.html"
+                                  title='fn sdl2_sys::render::SDL_RenderGetScale'>SDL_RenderGetScale</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderGetViewport.html"
+                                  title='fn sdl2_sys::render::SDL_RenderGetViewport'>SDL_RenderGetViewport</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderPresent.html"
+                                  title='fn sdl2_sys::render::SDL_RenderPresent'>SDL_RenderPresent</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderReadPixels.html"
+                                  title='fn sdl2_sys::render::SDL_RenderReadPixels'>SDL_RenderReadPixels</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderSetClipRect.html"
+                                  title='fn sdl2_sys::render::SDL_RenderSetClipRect'>SDL_RenderSetClipRect</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderSetLogicalSize.html"
+                                  title='fn sdl2_sys::render::SDL_RenderSetLogicalSize'>SDL_RenderSetLogicalSize</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderSetScale.html"
+                                  title='fn sdl2_sys::render::SDL_RenderSetScale'>SDL_RenderSetScale</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderSetViewport.html"
+                                  title='fn sdl2_sys::render::SDL_RenderSetViewport'>SDL_RenderSetViewport</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_RenderTargetSupported.html"
+                                  title='fn sdl2_sys::render::SDL_RenderTargetSupported'>SDL_RenderTargetSupported</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetRenderDrawBlendMode.html"
+                                  title='fn sdl2_sys::render::SDL_SetRenderDrawBlendMode'>SDL_SetRenderDrawBlendMode</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetRenderDrawColor.html"
+                                  title='fn sdl2_sys::render::SDL_SetRenderDrawColor'>SDL_SetRenderDrawColor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetRenderTarget.html"
+                                  title='fn sdl2_sys::render::SDL_SetRenderTarget'>SDL_SetRenderTarget</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetTextureAlphaMod.html"
+                                  title='fn sdl2_sys::render::SDL_SetTextureAlphaMod'>SDL_SetTextureAlphaMod</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetTextureBlendMode.html"
+                                  title='fn sdl2_sys::render::SDL_SetTextureBlendMode'>SDL_SetTextureBlendMode</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_SetTextureColorMod.html"
+                                  title='fn sdl2_sys::render::SDL_SetTextureColorMod'>SDL_SetTextureColorMod</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_UnlockTexture.html"
+                                  title='fn sdl2_sys::render::SDL_UnlockTexture'>SDL_UnlockTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_UpdateTexture.html"
+                                  title='fn sdl2_sys::render::SDL_UpdateTexture'>SDL_UpdateTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.SDL_UpdateYUVTexture.html"
+                                  title='fn sdl2_sys::render::SDL_UpdateYUVTexture'>SDL_UpdateYUVTexture</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.SDL_BlendMode.html"
+                                  title='type sdl2_sys::render::SDL_BlendMode'>SDL_BlendMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.SDL_RendererFlags.html"
+                                  title='type sdl2_sys::render::SDL_RendererFlags'>SDL_RendererFlags</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.SDL_RendererFlip.html"
+                                  title='type sdl2_sys::render::SDL_RendererFlip'>SDL_RendererFlip</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.SDL_TextureAccess.html"
+                                  title='type sdl2_sys::render::SDL_TextureAccess'>SDL_TextureAccess</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.SDL_TextureModulate.html"
+                                  title='type sdl2_sys::render::SDL_TextureModulate'>SDL_TextureModulate</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2_sys";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

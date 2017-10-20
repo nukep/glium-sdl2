@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `MouseUtil` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, MouseUtil">
+
+    <title>sdl2::mouse::MouseUtil - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct MouseUtil</p><div class="block items"><ul><li><a href="#methods">Methods</a></li></ul></div><p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>mouse</a></p><script>window.sidebarCurrent = {name: 'MouseUtil', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>mouse</a>::<wbr><a class="struct" href=''>MouseUtil</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#331-333' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct MouseUtil { /* fields omitted */ }</pre><div class='docblock'><p>Mouse utility functions. Access with <code>Sdl::mouse()</code>.</p>
+
+<pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">sdl_context</span> <span class="op">=</span> <span class="ident">sdl2</span>::<span class="ident">init</span>().<span class="ident">unwrap</span>();
+
+<span class="comment">// Hide the cursor</span>
+<span class="ident">sdl_context</span>.<span class="ident">mouse</span>().<span class="ident">show_cursor</span>(<span class="bool-val">false</span>);</pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../sdl2/mouse/struct.MouseUtil.html" title="struct sdl2::mouse::MouseUtil">MouseUtil</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#335-366' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.focused_window_id' class="method"><span id='focused_window_id.v' class='invisible'><code>pub fn <a href='#method.focused_window_id' class='fnname'>focused_window_id</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#337-345' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets the id of the window which currently has mouse focus.</p>
+</div><h4 id='method.warp_mouse_in_window' class="method"><span id='warp_mouse_in_window.v' class='invisible'><code>pub fn <a href='#method.warp_mouse_in_window' class='fnname'>warp_mouse_in_window</a>(&amp;self, window: &amp;<a class="struct" href="../../sdl2/video/struct.Window.html" title="struct sdl2::video::Window">Window</a>, x: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, y: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#347-349' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_relative_mouse_mode' class="method"><span id='set_relative_mouse_mode.v' class='invisible'><code>pub fn <a href='#method.set_relative_mouse_mode' class='fnname'>set_relative_mouse_mode</a>(&amp;self, on: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#351-353' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.relative_mouse_mode' class="method"><span id='relative_mouse_mode.v' class='invisible'><code>pub fn <a href='#method.relative_mouse_mode' class='fnname'>relative_mouse_mode</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#355-357' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.is_cursor_showing' class="method"><span id='is_cursor_showing.v' class='invisible'><code>pub fn <a href='#method.is_cursor_showing' class='fnname'>is_cursor_showing</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#359-361' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.show_cursor' class="method"><span id='show_cursor.v' class='invisible'><code>pub fn <a href='#method.show_cursor' class='fnname'>show_cursor</a>(&amp;self, show: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/mouse/mod.rs.html#363-365' title='goto source code'>[src]</a></span></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

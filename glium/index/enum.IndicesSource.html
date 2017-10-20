@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `IndicesSource` enum in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, IndicesSource">
+
+    <title>glium::index::IndicesSource - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Enum IndicesSource</p><div class="block items"><ul><li><a href="#variants">Variants</a></li><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>glium</a>::<wbr><a href='index.html'>index</a></p><script>window.sidebarCurrent = {name: 'IndicesSource', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>glium</a>::<wbr><a href='index.html'>index</a>::<wbr><a class="enum" href=''>IndicesSource</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/glium/index/mod.rs.html#52-89' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum IndicesSource&lt;'a&gt; {
+    IndexBuffer {
+        buffer: <a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;,
+        data_type: <a class="enum" href="../../glium/index/enum.IndexType.html" title="enum glium::index::IndexType">IndexType</a>,
+        primitives: <a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a>,
+    },
+    MultidrawArray {
+        buffer: <a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;,
+        primitives: <a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a>,
+    },
+    MultidrawElement {
+        commands: <a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;,
+        indices: <a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;,
+        data_type: <a class="enum" href="../../glium/index/enum.IndexType.html" title="enum glium::index::IndexType">IndexType</a>,
+        primitives: <a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a>,
+    },
+    NoIndices {
+        primitives: <a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a>,
+    },
+}</pre><div class='docblock'><p>Describes a source of indices used for drawing.</p>
+</div><h2 id='variants' class='variants small-section-header'>
+                   Variants<a href='#variants' class='anchor'></a></h2>
+<span id="variant.IndexBuffer" class="variant small-section-header"><a href="#variant.IndexBuffer" class="anchor field"></a><span id='IndexBuffer.v' class='invisible'><code>IndexBuffer</code></span></span><div class='docblock'><p>A buffer uploaded in video memory.</p>
+</div><span class='docblock autohide sub-variant' id='variant.IndexBuffer.fields'><h3 class='fields'>Fields of <code>IndexBuffer</code></h3>
+
+                           <table><tr><td id='variant.IndexBuffer.field.buffer'><span id='IndexBuffer.v.buffer.v' class='invisible'><code>buffer:&nbsp;<a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;</code></span></td><td><div class='docblock'><p>The buffer.</p>
+</div></td></tr><tr><td id='variant.IndexBuffer.field.data_type'><span id='IndexBuffer.v.data_type.v' class='invisible'><code>data_type:&nbsp;<a class="enum" href="../../glium/index/enum.IndexType.html" title="enum glium::index::IndexType">IndexType</a></code></span></td><td><div class='docblock'><p>Type of indices in the buffer.</p>
+</div></td></tr><tr><td id='variant.IndexBuffer.field.primitives'><span id='IndexBuffer.v.primitives.v' class='invisible'><code>primitives:&nbsp;<a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a></code></span></td><td><div class='docblock'><p>Type of primitives contained in the vertex source.</p>
+</div></td></tr></table></span><span id="variant.MultidrawArray" class="variant small-section-header"><a href="#variant.MultidrawArray" class="anchor field"></a><span id='MultidrawArray.v' class='invisible'><code>MultidrawArray</code></span></span><div class='docblock'><p>Use a multidraw indirect buffer without indices.</p>
+</div><span class='docblock autohide sub-variant' id='variant.MultidrawArray.fields'><h3 class='fields'>Fields of <code>MultidrawArray</code></h3>
+
+                           <table><tr><td id='variant.MultidrawArray.field.buffer'><span id='MultidrawArray.v.buffer.v' class='invisible'><code>buffer:&nbsp;<a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;</code></span></td><td><div class='docblock'><p>The buffer.</p>
+</div></td></tr><tr><td id='variant.MultidrawArray.field.primitives'><span id='MultidrawArray.v.primitives.v' class='invisible'><code>primitives:&nbsp;<a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a></code></span></td><td><div class='docblock'><p>Type of primitives contained in the vertex source.</p>
+</div></td></tr></table></span><span id="variant.MultidrawElement" class="variant small-section-header"><a href="#variant.MultidrawElement" class="anchor field"></a><span id='MultidrawElement.v' class='invisible'><code>MultidrawElement</code></span></span><div class='docblock'><p>Use a multidraw indirect buffer with indices.</p>
+</div><span class='docblock autohide sub-variant' id='variant.MultidrawElement.fields'><h3 class='fields'>Fields of <code>MultidrawElement</code></h3>
+
+                           <table><tr><td id='variant.MultidrawElement.field.commands'><span id='MultidrawElement.v.commands.v' class='invisible'><code>commands:&nbsp;<a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;</code></span></td><td><div class='docblock'><p>The buffer of the commands.</p>
+</div></td></tr><tr><td id='variant.MultidrawElement.field.indices'><span id='MultidrawElement.v.indices.v' class='invisible'><code>indices:&nbsp;<a class="struct" href="../../glium/buffer/struct.BufferAnySlice.html" title="struct glium::buffer::BufferAnySlice">BufferAnySlice</a>&lt;'a&gt;</code></span></td><td><div class='docblock'><p>The buffer of the indices.</p>
+</div></td></tr><tr><td id='variant.MultidrawElement.field.data_type'><span id='MultidrawElement.v.data_type.v' class='invisible'><code>data_type:&nbsp;<a class="enum" href="../../glium/index/enum.IndexType.html" title="enum glium::index::IndexType">IndexType</a></code></span></td><td><div class='docblock'><p>Type of indices in the buffer.</p>
+</div></td></tr><tr><td id='variant.MultidrawElement.field.primitives'><span id='MultidrawElement.v.primitives.v' class='invisible'><code>primitives:&nbsp;<a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a></code></span></td><td><div class='docblock'><p>Type of primitives contained in the vertex source.</p>
+</div></td></tr></table></span><span id="variant.NoIndices" class="variant small-section-header"><a href="#variant.NoIndices" class="anchor field"></a><span id='NoIndices.v' class='invisible'><code>NoIndices</code></span></span><div class='docblock'><p>Don&#39;t use indices. Assemble primitives by using the order in which the vertices are in
+the vertices source.</p>
+</div><span class='docblock autohide sub-variant' id='variant.NoIndices.fields'><h3 class='fields'>Fields of <code>NoIndices</code></h3>
+
+                           <table><tr><td id='variant.NoIndices.field.primitives'><span id='NoIndices.v.primitives.v' class='invisible'><code>primitives:&nbsp;<a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a></code></span></td><td><div class='docblock'><p>Type of primitives contained in the vertex source.</p>
+</div></td></tr></table></span>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#91-102' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_primitives_type' class="method"><span id='get_primitives_type.v' class='invisible'><code>pub fn <a href='#method.get_primitives_type' class='fnname'>get_primitives_type</a>(&amp;self) -&gt; <a class="enum" href="../../glium/index/enum.PrimitiveType.html" title="enum glium::index::PrimitiveType">PrimitiveType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#94-101' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the type of the primitives.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-From&lt;&amp;&#39;a IndexBuffer&lt;T&gt;&gt;' class='impl'><span class='in-band'><code>impl&lt;'a, T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;&amp;'a <a class="struct" href="../../glium/struct.IndexBuffer.html" title="struct glium::IndexBuffer">IndexBuffer</a>&lt;T&gt;&gt; for <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../../glium/index/trait.Index.html" title="trait glium::index::Index">Index</a>,&nbsp;</span></code><a href='#impl-From&lt;&amp;&#39;a IndexBuffer&lt;T&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#251-260' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(buf: &amp;'a <a class="struct" href="../../glium/struct.IndexBuffer.html" title="struct glium::IndexBuffer">IndexBuffer</a>&lt;T&gt;) -&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#253-259' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From&lt;IndexBufferSlice&lt;&#39;a, T&gt;&gt;' class='impl'><span class='in-band'><code>impl&lt;'a, T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../../glium/index/struct.IndexBufferSlice.html" title="struct glium::index::IndexBufferSlice">IndexBufferSlice</a>&lt;'a, T&gt;&gt; for <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../../glium/index/trait.Index.html" title="trait glium::index::Index">Index</a>,&nbsp;</span></code><a href='#impl-From&lt;IndexBufferSlice&lt;&#39;a, T&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#317-326' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class="method"><span id='from.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(buf: <a class="struct" href="../../glium/index/struct.IndexBufferSlice.html" title="struct glium::index::IndexBufferSlice">IndexBufferSlice</a>&lt;'a, T&gt;) -&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#319-325' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From&lt;&amp;&#39;r IndexBufferSlice&lt;&#39;a, T&gt;&gt;' class='impl'><span class='in-band'><code>impl&lt;'a, 'r, T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;&amp;'r <a class="struct" href="../../glium/index/struct.IndexBufferSlice.html" title="struct glium::index::IndexBufferSlice">IndexBufferSlice</a>&lt;'a, T&gt;&gt; for <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../../glium/index/trait.Index.html" title="trait glium::index::Index">Index</a>,&nbsp;</span></code><a href='#impl-From&lt;&amp;&#39;r IndexBufferSlice&lt;&#39;a, T&gt;&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#328-337' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-2' class="method"><span id='from.v-2' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(buf: &amp;'r <a class="struct" href="../../glium/index/struct.IndexBufferSlice.html" title="struct glium::index::IndexBufferSlice">IndexBufferSlice</a>&lt;'a, T&gt;) -&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#330-336' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From&lt;&amp;&#39;a IndexBufferAny&gt;' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;&amp;'a <a class="struct" href="../../glium/index/struct.IndexBufferAny.html" title="struct glium::index::IndexBufferAny">IndexBufferAny</a>&gt; for <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code><a href='#impl-From&lt;&amp;&#39;a IndexBufferAny&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#392-401' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-3' class="method"><span id='from.v-3' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(buf: &amp;'a <a class="struct" href="../../glium/index/struct.IndexBufferAny.html" title="struct glium::index::IndexBufferAny">IndexBufferAny</a>) -&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/buffer.rs.html#394-400' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#51' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#51' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 id='impl-From&lt;NoIndices&gt;' class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../../glium/index/struct.NoIndices.html" title="struct glium::index::NoIndices">NoIndices</a>&gt; for <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code><a href='#impl-From&lt;NoIndices&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#246-253' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-4' class="method"><span id='from.v-4' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(marker: <a class="struct" href="../../glium/index/struct.NoIndices.html" title="struct glium::index::NoIndices">NoIndices</a>) -&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#248-252' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From&lt;&amp;&#39;b NoIndices&gt;' class='impl'><span class='in-band'><code>impl&lt;'a, 'b&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;&amp;'b <a class="struct" href="../../glium/index/struct.NoIndices.html" title="struct glium::index::NoIndices">NoIndices</a>&gt; for <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code><a href='#impl-From&lt;&amp;&#39;b NoIndices&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#255-262' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-5' class="method"><span id='from.v-5' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(marker: &amp;'b <a class="struct" href="../../glium/index/struct.NoIndices.html" title="struct glium::index::NoIndices">NoIndices</a>) -&gt; <a class="enum" href="../../glium/index/enum.IndicesSource.html" title="enum glium::index::IndicesSource">IndicesSource</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/glium/index/mod.rs.html#257-261' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "glium";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

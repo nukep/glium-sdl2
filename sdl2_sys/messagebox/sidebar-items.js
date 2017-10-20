@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["SDL_MessageBoxButtonFlags",""],["SDL_MessageBoxColorType",""],["SDL_MessageBoxFlags",""]],"fn":[["SDL_ShowMessageBox",""],["SDL_ShowSimpleMessageBox",""]],"struct":[["SDL_MessageBoxButtonData",""],["SDL_MessageBoxColor",""],["SDL_MessageBoxColorScheme",""],["SDL_MessageBoxData",""]]});

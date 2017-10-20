@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `EventSubsystem` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, EventSubsystem">
+
+    <title>sdl2::EventSubsystem - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct EventSubsystem</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>sdl2</a></p><script>window.sidebarCurrent = {name: 'EventSubsystem', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>sdl2</a>::<wbr><a class="struct" href=''>EventSubsystem</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/sdl2/sdl.rs.html#200-204' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct EventSubsystem { /* fields omitted */ }</pre>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../sdl2/struct.EventSubsystem.html" title="struct sdl2::EventSubsystem">EventSubsystem</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#51-262' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.flush_event' class="method"><span id='flush_event.v' class='invisible'><code>pub fn <a href='#method.flush_event' class='fnname'>flush_event</a>(&amp;self, event_type: <a class="enum" href="../sdl2/event/enum.EventType.html" title="enum sdl2::event::EventType">EventType</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#53-55' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Removes all events in the event queue that match the specified event type.</p>
+</div><h4 id='method.flush_events' class="method"><span id='flush_events.v' class='invisible'><code>pub fn <a href='#method.flush_events' class='fnname'>flush_events</a>(&amp;self, min_type: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, max_type: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#58-60' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Removes all events in the event queue that match the specified type range.</p>
+</div><h4 id='method.peek_events' class="method"><span id='peek_events.v' class='invisible'><code>pub fn <a href='#method.peek_events' class='fnname'>peek_events</a>&lt;B&gt;(&amp;self, max_amount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; B <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;B: <a class="trait" href="https://doc.rust-lang.org/nightly/core/iter/traits/trait.FromIterator.html" title="trait core::iter::traits::FromIterator">FromIterator</a>&lt;<a class="enum" href="../sdl2/event/enum.Event.html" title="enum sdl2::event::Event">Event</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#82-111' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Reads the events at the front of the event queue, until the maximum amount
+of events is read.</p>
+
+<p>The events will <em>not</em> be removed from the queue.</p>
+
+<h1 id='example' class='section-header'><a href='#example'>Example</a></h1>
+<pre class="rust rust-example-rendered">
+<span class="kw">use</span> <span class="ident">sdl2</span>::<span class="ident">event</span>::<span class="ident">Event</span>;
+
+<span class="kw">let</span> <span class="ident">sdl_context</span> <span class="op">=</span> <span class="ident">sdl2</span>::<span class="ident">init</span>().<span class="ident">unwrap</span>();
+<span class="kw">let</span> <span class="ident">event_subsystem</span> <span class="op">=</span> <span class="ident">sdl_context</span>.<span class="ident">event</span>().<span class="ident">unwrap</span>();
+
+<span class="comment">// Read up to 1024 events</span>
+<span class="kw">let</span> <span class="ident">events</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Event</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">event_subsystem</span>.<span class="ident">peek_events</span>(<span class="number">1024</span>);
+
+<span class="comment">// Print each one</span>
+<span class="kw">for</span> <span class="ident">event</span> <span class="kw">in</span> <span class="ident">events</span> {
+    <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{:?}&quot;</span>, <span class="ident">event</span>);
+}</pre>
+</div><h4 id='method.push_event' class="method"><span id='push_event.v' class='invisible'><code>pub fn <a href='#method.push_event' class='fnname'>push_event</a>(&amp;self, event: <a class="enum" href="../sdl2/event/enum.Event.html" title="enum sdl2::event::Event">Event</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#114-125' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Pushes an event to the event queue.</p>
+</div><h4 id='method.register_event' class="method"><span id='register_event.v' class='invisible'><code>pub unsafe fn <a href='#method.register_event' class='fnname'>register_event</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#156-158' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Register a custom SDL event.</p>
+
+<p>When pushing a user event, you must make sure that the <code>type_</code> field is set to a
+registered SDL event number.</p>
+
+<p>The <code>code</code>, <code>data1</code>,  and <code>data2</code> fields can be used to store user defined data.</p>
+
+<p>See the <a href="https://wiki.libsdl.org/SDL_UserEvent">SDL documentation</a> for more information.</p>
+
+<h1 id='example-1' class='section-header'><a href='#example-1'>Example</a></h1>
+<pre class="rust rust-example-rendered">
+<span class="kw">let</span> <span class="ident">sdl</span> <span class="op">=</span> <span class="ident">sdl2</span>::<span class="ident">init</span>().<span class="ident">unwrap</span>();
+<span class="kw">let</span> <span class="ident">ev</span> <span class="op">=</span> <span class="ident">sdl</span>.<span class="ident">event</span>().<span class="ident">unwrap</span>();
+
+<span class="kw">let</span> <span class="ident">custom_event_type_id</span> <span class="op">=</span> <span class="kw">unsafe</span> { <span class="ident">ev</span>.<span class="ident">register_event</span>().<span class="ident">unwrap</span>() };
+<span class="kw">let</span> <span class="ident">event</span> <span class="op">=</span> <span class="ident">sdl2</span>::<span class="ident">event</span>::<span class="ident">Event</span>::<span class="ident">User</span> {
+   <span class="ident">timestamp</span>: <span class="number">0</span>,
+   <span class="ident">window_id</span>: <span class="number">0</span>,
+   <span class="ident">type_</span>: <span class="ident">custom_event_type_id</span>,
+   <span class="ident">code</span>: <span class="number">456</span>,
+   <span class="ident">data1</span>: <span class="number">0x1234</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> ::<span class="ident">sdl2</span>::<span class="ident">libc</span>::<span class="ident">c_void</span>,
+   <span class="ident">data2</span>: <span class="number">0x5678</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> ::<span class="ident">sdl2</span>::<span class="ident">libc</span>::<span class="ident">c_void</span>,
+};
+
+<span class="ident">ev</span>.<span class="ident">push_event</span>(<span class="ident">event</span>);
+</pre>
+</div><h4 id='method.register_events' class="method"><span id='register_events.v' class='invisible'><code>pub unsafe fn <a href='#method.register_events' class='fnname'>register_events</a>(&amp;self, nr: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>&gt;, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#163-177' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Registers custom SDL events.</p>
+
+<p>Returns an error, if no more user events can be created.</p>
+</div><h4 id='method.register_custom_event' class="method"><span id='register_custom_event.v' class='invisible'><code>pub fn <a href='#method.register_custom_event' class='fnname'>register_custom_event</a>&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#186-203' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Register a custom event</p>
+
+<p>It returns an error when the same type is registered twice.</p>
+
+<h1 id='example-2' class='section-header'><a href='#example-2'>Example</a></h1>
+<p>See <a href="#method.push_custom_event">push_custom_event</a></p>
+</div><h4 id='method.push_custom_event' class="method"><span id='push_custom_event.v' class='invisible'><code>pub fn <a href='#method.push_custom_event' class='fnname'>push_custom_event</a>&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a>&gt;(&amp;self, event: T) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/event.rs.html#233-261' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Push a custom event</p>
+
+<p>If the event type <code>T</code> was not registered using
+<a href="#method.register_custom_event">register_custom_event</a>,
+this method will panic.</p>
+
+<h1 id='example-pushing-and-receiving-a-custom-event' class='section-header'><a href='#example-pushing-and-receiving-a-custom-event'>Example: pushing and receiving a custom event</a></h1>
+<pre class="rust rust-example-rendered">
+<span class="kw">struct</span> <span class="ident">SomeCustomEvent</span> {
+    <span class="ident">a</span>: <span class="ident">i32</span>
+}
+
+<span class="kw">let</span> <span class="ident">sdl</span> <span class="op">=</span> <span class="ident">sdl2</span>::<span class="ident">init</span>().<span class="ident">unwrap</span>();
+<span class="kw">let</span> <span class="ident">ev</span> <span class="op">=</span> <span class="ident">sdl</span>.<span class="ident">event</span>().<span class="ident">unwrap</span>();
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">ep</span> <span class="op">=</span> <span class="ident">sdl</span>.<span class="ident">event_pump</span>().<span class="ident">unwrap</span>();
+
+<span class="ident">ev</span>.<span class="ident">register_custom_event</span>::<span class="op">&lt;</span><span class="ident">SomeCustomEvent</span><span class="op">&gt;</span>().<span class="ident">unwrap</span>();
+
+<span class="kw">let</span> <span class="ident">event</span> <span class="op">=</span> <span class="ident">SomeCustomEvent</span> { <span class="ident">a</span>: <span class="number">42</span> };
+
+<span class="ident">ev</span>.<span class="ident">push_custom_event</span>(<span class="ident">event</span>);
+
+<span class="kw">let</span> <span class="ident">received</span> <span class="op">=</span> <span class="ident">ep</span>.<span class="ident">poll_event</span>().<span class="ident">unwrap</span>(); <span class="comment">// or within a for event in ep.poll_iter()</span>
+<span class="kw">if</span> <span class="ident">received</span>.<span class="ident">is_user_event</span>() {
+    <span class="kw">let</span> <span class="ident">e2</span> <span class="op">=</span> <span class="ident">received</span>.<span class="ident">as_user_event_type</span>::<span class="op">&lt;</span><span class="ident">SomeCustomEvent</span><span class="op">&gt;</span>().<span class="ident">unwrap</span>();
+    <span class="macro">assert_eq</span><span class="macro">!</span>(<span class="ident">e2</span>.<span class="ident">a</span>, <span class="number">42</span>);
+}</pre>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../sdl2/struct.EventSubsystem.html" title="struct sdl2::EventSubsystem">EventSubsystem</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/sdl.rs.html#207-220' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>pub fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="struct" href="../sdl2/struct.EventSubsystem.html" title="struct sdl2::EventSubsystem">EventSubsystem</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/sdl.rs.html#209-213' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.sdl' class="method"><span id='sdl.v' class='invisible'><code>pub fn <a href='#method.sdl' class='fnname'>sdl</a>(&amp;self) -&gt; <a class="struct" href="../sdl2/struct.Sdl.html" title="struct sdl2::Sdl">Sdl</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/sdl.rs.html#217-219' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Obtain an SDL context.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../sdl2/struct.EventSubsystem.html" title="struct sdl2::EventSubsystem">EventSubsystem</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/sdl2/sdl.rs.html#205' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "sdl2";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

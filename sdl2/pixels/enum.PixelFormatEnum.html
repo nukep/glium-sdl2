@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PixelFormatEnum` enum in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PixelFormatEnum">
+
+    <title>sdl2::pixels::PixelFormatEnum - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Enum PixelFormatEnum</p><div class="block items"><ul><li><a href="#variants">Variants</a></li><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>pixels</a></p><script>window.sidebarCurrent = {name: 'PixelFormatEnum', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>pixels</a>::<wbr><a class="enum" href=''>PixelFormatEnum</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/sdl2/pixels.rs.html#184-221' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'><div class="docblock attributes">#[repr(i32)]
+</div>pub enum PixelFormatEnum {
+    Unknown,
+    Index1LSB,
+    Index1MSB,
+    Index4LSB,
+    Index4MSB,
+    Index8,
+    RGB332,
+    RGB444,
+    RGB555,
+    BGR555,
+    ARGB4444,
+    RGBA4444,
+    ABGR4444,
+    BGRA4444,
+    ARGB1555,
+    RGBA5551,
+    ABGR1555,
+    BGRA5551,
+    RGB565,
+    BGR565,
+    RGB24,
+    BGR24,
+    RGB888,
+    RGBX8888,
+    BGR888,
+    BGRX8888,
+    ARGB8888,
+    RGBA8888,
+    ABGR8888,
+    BGRA8888,
+    ARGB2101010,
+    YV12,
+    IYUV,
+    YUY2,
+    UYVY,
+    YVYU,
+}</pre><h2 id='variants' class='variants small-section-header'>
+                   Variants<a href='#variants' class='anchor'></a></h2>
+<span id="variant.Unknown" class="variant small-section-header"><a href="#variant.Unknown" class="anchor field"></a><span id='Unknown.v' class='invisible'><code>Unknown</code></span></span><span id="variant.Index1LSB" class="variant small-section-header"><a href="#variant.Index1LSB" class="anchor field"></a><span id='Index1LSB.v' class='invisible'><code>Index1LSB</code></span></span><span id="variant.Index1MSB" class="variant small-section-header"><a href="#variant.Index1MSB" class="anchor field"></a><span id='Index1MSB.v' class='invisible'><code>Index1MSB</code></span></span><span id="variant.Index4LSB" class="variant small-section-header"><a href="#variant.Index4LSB" class="anchor field"></a><span id='Index4LSB.v' class='invisible'><code>Index4LSB</code></span></span><span id="variant.Index4MSB" class="variant small-section-header"><a href="#variant.Index4MSB" class="anchor field"></a><span id='Index4MSB.v' class='invisible'><code>Index4MSB</code></span></span><span id="variant.Index8" class="variant small-section-header"><a href="#variant.Index8" class="anchor field"></a><span id='Index8.v' class='invisible'><code>Index8</code></span></span><span id="variant.RGB332" class="variant small-section-header"><a href="#variant.RGB332" class="anchor field"></a><span id='RGB332.v' class='invisible'><code>RGB332</code></span></span><span id="variant.RGB444" class="variant small-section-header"><a href="#variant.RGB444" class="anchor field"></a><span id='RGB444.v' class='invisible'><code>RGB444</code></span></span><span id="variant.RGB555" class="variant small-section-header"><a href="#variant.RGB555" class="anchor field"></a><span id='RGB555.v' class='invisible'><code>RGB555</code></span></span><span id="variant.BGR555" class="variant small-section-header"><a href="#variant.BGR555" class="anchor field"></a><span id='BGR555.v' class='invisible'><code>BGR555</code></span></span><span id="variant.ARGB4444" class="variant small-section-header"><a href="#variant.ARGB4444" class="anchor field"></a><span id='ARGB4444.v' class='invisible'><code>ARGB4444</code></span></span><span id="variant.RGBA4444" class="variant small-section-header"><a href="#variant.RGBA4444" class="anchor field"></a><span id='RGBA4444.v' class='invisible'><code>RGBA4444</code></span></span><span id="variant.ABGR4444" class="variant small-section-header"><a href="#variant.ABGR4444" class="anchor field"></a><span id='ABGR4444.v' class='invisible'><code>ABGR4444</code></span></span><span id="variant.BGRA4444" class="variant small-section-header"><a href="#variant.BGRA4444" class="anchor field"></a><span id='BGRA4444.v' class='invisible'><code>BGRA4444</code></span></span><span id="variant.ARGB1555" class="variant small-section-header"><a href="#variant.ARGB1555" class="anchor field"></a><span id='ARGB1555.v' class='invisible'><code>ARGB1555</code></span></span><span id="variant.RGBA5551" class="variant small-section-header"><a href="#variant.RGBA5551" class="anchor field"></a><span id='RGBA5551.v' class='invisible'><code>RGBA5551</code></span></span><span id="variant.ABGR1555" class="variant small-section-header"><a href="#variant.ABGR1555" class="anchor field"></a><span id='ABGR1555.v' class='invisible'><code>ABGR1555</code></span></span><span id="variant.BGRA5551" class="variant small-section-header"><a href="#variant.BGRA5551" class="anchor field"></a><span id='BGRA5551.v' class='invisible'><code>BGRA5551</code></span></span><span id="variant.RGB565" class="variant small-section-header"><a href="#variant.RGB565" class="anchor field"></a><span id='RGB565.v' class='invisible'><code>RGB565</code></span></span><span id="variant.BGR565" class="variant small-section-header"><a href="#variant.BGR565" class="anchor field"></a><span id='BGR565.v' class='invisible'><code>BGR565</code></span></span><span id="variant.RGB24" class="variant small-section-header"><a href="#variant.RGB24" class="anchor field"></a><span id='RGB24.v' class='invisible'><code>RGB24</code></span></span><span id="variant.BGR24" class="variant small-section-header"><a href="#variant.BGR24" class="anchor field"></a><span id='BGR24.v' class='invisible'><code>BGR24</code></span></span><span id="variant.RGB888" class="variant small-section-header"><a href="#variant.RGB888" class="anchor field"></a><span id='RGB888.v' class='invisible'><code>RGB888</code></span></span><span id="variant.RGBX8888" class="variant small-section-header"><a href="#variant.RGBX8888" class="anchor field"></a><span id='RGBX8888.v' class='invisible'><code>RGBX8888</code></span></span><span id="variant.BGR888" class="variant small-section-header"><a href="#variant.BGR888" class="anchor field"></a><span id='BGR888.v' class='invisible'><code>BGR888</code></span></span><span id="variant.BGRX8888" class="variant small-section-header"><a href="#variant.BGRX8888" class="anchor field"></a><span id='BGRX8888.v' class='invisible'><code>BGRX8888</code></span></span><span id="variant.ARGB8888" class="variant small-section-header"><a href="#variant.ARGB8888" class="anchor field"></a><span id='ARGB8888.v' class='invisible'><code>ARGB8888</code></span></span><span id="variant.RGBA8888" class="variant small-section-header"><a href="#variant.RGBA8888" class="anchor field"></a><span id='RGBA8888.v' class='invisible'><code>RGBA8888</code></span></span><span id="variant.ABGR8888" class="variant small-section-header"><a href="#variant.ABGR8888" class="anchor field"></a><span id='ABGR8888.v' class='invisible'><code>ABGR8888</code></span></span><span id="variant.BGRA8888" class="variant small-section-header"><a href="#variant.BGRA8888" class="anchor field"></a><span id='BGRA8888.v' class='invisible'><code>BGRA8888</code></span></span><span id="variant.ARGB2101010" class="variant small-section-header"><a href="#variant.ARGB2101010" class="anchor field"></a><span id='ARGB2101010.v' class='invisible'><code>ARGB2101010</code></span></span><span id="variant.YV12" class="variant small-section-header"><a href="#variant.YV12" class="anchor field"></a><span id='YV12.v' class='invisible'><code>YV12</code></span></span><span id="variant.IYUV" class="variant small-section-header"><a href="#variant.IYUV" class="anchor field"></a><span id='IYUV.v' class='invisible'><code>IYUV</code></span></span><span id="variant.YUY2" class="variant small-section-header"><a href="#variant.YUY2" class="anchor field"></a><span id='YUY2.v' class='invisible'><code>YUY2</code></span></span><span id="variant.UYVY" class="variant small-section-header"><a href="#variant.UYVY" class="anchor field"></a><span id='UYVY.v' class='invisible'><code>UYVY</code></span></span><span id="variant.YVYU" class="variant small-section-header"><a href="#variant.YVYU" class="anchor field"></a><span id='YVYU.v' class='invisible'><code>YVYU</code></span></span>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#223-353' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_masks' class="method"><span id='from_masks.v' class='invisible'><code>pub fn <a href='#method.from_masks' class='fnname'>from_masks</a>(masks: <a class="struct" href="../../sdl2/pixels/struct.PixelMasks.html" title="struct sdl2::pixels::PixelMasks">PixelMasks</a>) -&gt; <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#224-229' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.into_masks' class="method"><span id='into_masks.v' class='invisible'><code>pub fn <a href='#method.into_masks' class='fnname'>into_masks</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../sdl2/pixels/struct.PixelMasks.html" title="struct sdl2::pixels::PixelMasks">PixelMasks</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#231-253' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.byte_size_from_pitch_and_height' class="method"><span id='byte_size_from_pitch_and_height.v' class='invisible'><code>pub fn <a href='#method.byte_size_from_pitch_and_height' class='fnname'>byte_size_from_pitch_and_height</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;pitch: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;height: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a><br>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#257-268' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Calculates the total byte size of an image buffer, given its pitch
+and height.</p>
+</div><h4 id='method.byte_size_of_pixels' class="method"><span id='byte_size_of_pixels.v' class='invisible'><code>pub fn <a href='#method.byte_size_of_pixels' class='fnname'>byte_size_of_pixels</a>(&amp;self, num_of_pixels: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#270-305' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.byte_size_per_pixel' class="method"><span id='byte_size_per_pixel.v' class='invisible'><code>pub fn <a href='#method.byte_size_per_pixel' class='fnname'>byte_size_per_pixel</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#307-341' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.supports_alpha' class="method"><span id='supports_alpha.v' class='invisible'><code>pub fn <a href='#method.supports_alpha' class='fnname'>supports_alpha</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#343-352' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Copy' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html" title="trait core::marker::Copy">Copy</a> for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-Copy' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 id='impl-Eq' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html" title="trait core::cmp::Eq">Eq</a> for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-Eq' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 id='impl-PartialEq' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a> for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-PartialEq' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class="method"><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class="method"><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Rhs) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/cmp.rs.html#121' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 id='impl-Hash' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html" title="trait core::hash::Hash">Hash</a> for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-Hash' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class="method"><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html" title="trait core::hash::Hasher">Hasher</a>&gt;(&amp;self, __arg_0: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>__H)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Feeds this value into the given [<code>Hasher</code>]. <a href="https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash">Read more</a></p>
+</div><h4 id='method.hash_slice' class="method"><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[Self]</a>, state: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>H) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;H: <a class="trait" href="https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html" title="trait core::hash::Hasher">Hasher</a>,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/hash/mod.rs.html#202-208' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the given [<code>Hasher</code>]. <a href="https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice">Read more</a></p>
+</div></div><h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#183' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 id='impl-Into&lt;SDL_PixelFormatEnum&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="type" href="../../sdl2_sys/pixels/type.SDL_PixelFormatEnum.html" title="type sdl2_sys::pixels::SDL_PixelFormatEnum">SDL_PixelFormatEnum</a>&gt; for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-Into&lt;SDL_PixelFormatEnum&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#355-359' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.into' class="method"><span id='into.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html#tymethod.into' class='fnname'>into</a>(self) -&gt; <a class="type" href="../../sdl2_sys/pixels/type.SDL_PixelFormatEnum.html" title="type sdl2_sys::pixels::SDL_PixelFormatEnum">SDL_PixelFormatEnum</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#356-358' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-From&lt;PixelFormat&gt;' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.From.html" title="trait core::convert::From">From</a>&lt;<a class="struct" href="../../sdl2/pixels/struct.PixelFormat.html" title="struct sdl2::pixels::PixelFormat">PixelFormat</a>&gt; for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-From&lt;PixelFormat&gt;' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#361-371' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class="method"><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(pf: <a class="struct" href="../../sdl2/pixels/struct.PixelFormat.html" title="struct sdl2::pixels::PixelFormat">PixelFormat</a>) -&gt; <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#362-370' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 id='impl-FromPrimitive' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../num_traits/cast/trait.FromPrimitive.html" title="trait num_traits::cast::FromPrimitive">FromPrimitive</a> for <a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a></code><a href='#impl-FromPrimitive' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#373-419' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_i64' class="method"><span id='from_i64.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#tymethod.from_i64' class='fnname'>from_i64</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#374-416' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>i64</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#tymethod.from_i64">Read more</a></p>
+</div><h4 id='method.from_u64' class="method"><span id='from_u64.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#tymethod.from_u64' class='fnname'>from_u64</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../sdl2/pixels/enum.PixelFormatEnum.html" title="enum sdl2::pixels::PixelFormatEnum">PixelFormatEnum</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/sdl2/pixels.rs.html#418' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>u64</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#tymethod.from_u64">Read more</a></p>
+</div><h4 id='method.from_isize' class="method"><span id='from_isize.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_isize' class='fnname'>from_isize</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.isize.html">isize</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#280-282' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>isize</code> to return an optional value of this type. If the value cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_isize">Read more</a></p>
+</div><h4 id='method.from_i8' class="method"><span id='from_i8.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_i8' class='fnname'>from_i8</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i8.html">i8</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#287-289' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>i8</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_i8">Read more</a></p>
+</div><h4 id='method.from_i16' class="method"><span id='from_i16.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_i16' class='fnname'>from_i16</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i16.html">i16</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#294-296' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>i16</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_i16">Read more</a></p>
+</div><h4 id='method.from_i32' class="method"><span id='from_i32.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_i32' class='fnname'>from_i32</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#301-303' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>i32</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_i32">Read more</a></p>
+</div><h4 id='method.from_usize' class="method"><span id='from_usize.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_usize' class='fnname'>from_usize</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#312-314' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert a <code>usize</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_usize">Read more</a></p>
+</div><h4 id='method.from_u8' class="method"><span id='from_u8.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_u8' class='fnname'>from_u8</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#319-321' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>u8</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_u8">Read more</a></p>
+</div><h4 id='method.from_u16' class="method"><span id='from_u16.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_u16' class='fnname'>from_u16</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#326-328' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>u16</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_u16">Read more</a></p>
+</div><h4 id='method.from_u32' class="method"><span id='from_u32.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_u32' class='fnname'>from_u32</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#333-335' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an <code>u32</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_u32">Read more</a></p>
+</div><h4 id='method.from_f32' class="method"><span id='from_f32.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_f32' class='fnname'>from_f32</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#344-346' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert a <code>f32</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_f32">Read more</a></p>
+</div><h4 id='method.from_f64' class="method"><span id='from_f64.v' class='invisible'><code>fn <a href='../../num_traits/cast/trait.FromPrimitive.html#method.from_f64' class='fnname'>from_f64</a>(n: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f64.html">f64</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Self&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/num_traits/cast.rs.html#351-353' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert a <code>f64</code> to return an optional value of this type. If the type cannot be represented by this value, the <code>None</code> is returned. <a href="../../num_traits/cast/trait.FromPrimitive.html#method.from_f64">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

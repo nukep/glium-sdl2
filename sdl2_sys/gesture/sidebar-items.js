@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["SDL_LoadDollarTemplates",""],["SDL_RecordGesture",""],["SDL_SaveAllDollarTemplates",""],["SDL_SaveDollarTemplate",""]],"type":[["SDL_GestureID",""]]});

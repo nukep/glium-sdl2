@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["SDL_GetCPUCacheLineSize",""],["SDL_GetCPUCount",""],["SDL_GetSystemRAM",""],["SDL_Has3DNow",""],["SDL_HasAVX",""],["SDL_HasAltiVec",""],["SDL_HasMMX",""],["SDL_HasRDTSC",""],["SDL_HasSSE",""],["SDL_HasSSE2",""],["SDL_HasSSE3",""],["SDL_HasSSE41",""],["SDL_HasSSE42",""]]});

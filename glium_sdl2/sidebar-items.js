@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["GliumSdl2Error",""]],"struct":[["SDL2Facade","Facade implementation for an SDL2 window."],["SDL2WindowBackend",""]],"trait":[["DisplayBuild","An object that can build a facade object."]],"type":[["Display",""]]});
