@@ -9,10 +9,10 @@ repository = "https://github.com/nukep/glium-sdl2/"
 description = "An SDL2 backend for Glium - a high-level OpenGL wrapper for the Rust language."
 
 [dependencies]
-sdl2 = "0.30"
+sdl2 = "0.31"
 
 [dependencies.glium]
-version = "0.18"
+version = "0.19"
 # Do not enable any features by default, as to not bring in unwanted dependencies
 # (Cargo seems to apply a "union" of requested features across projects for any given dependency).
 # Instead, Let the library user define which features they want.
