@@ -12,8 +12,8 @@ are in heavy development and are subject to change.
 ```toml
 [dependencies]
 glium_sdl2 = "0.15"
-sdl2 = "0.30"
-glium = "0.18"
+sdl2 = "0.31"
+glium = "0.19"
 
 features = []
 default-features = false
