@@ -1,5 +1,10 @@
 # Changes
 
+## Version 0.16 (2020-12-14)
+- Changed glium dependency to version `0.28`
+- Changed SDL2 dependency to version `0.34`
+- Update deprecated Rust idioms to remove warnings
+
 ## Version 0.15 (2017-10-19)
 - Changed glium dependency to version `0.18`
 

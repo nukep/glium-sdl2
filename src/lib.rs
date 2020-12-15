@@ -93,17 +93,11 @@ impl From<IncompatibleOpenGl> for GliumSdl2Error {
     }
 }
 
-impl std::error::Error for GliumSdl2Error {
-    fn description(&self) -> &str {
-        return match *self {
-            GliumSdl2Error::WindowBuildError(ref err) => err.description(),
-            GliumSdl2Error::ContextCreationError(ref s) => s
-        }
-    }
 
-    fn cause(&self) -> Option<&std::error::Error> {
+impl std::error::Error for GliumSdl2Error {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match *self {
-            GliumSdl2Error::WindowBuildError(ref err) => err.cause(),
+            GliumSdl2Error::WindowBuildError(ref err) => err.source(),
             GliumSdl2Error::ContextCreationError(_) => None
         }
     }
@@ -210,8 +204,8 @@ impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
     type Err = GliumSdl2Error;
 
     fn build_glium_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, GliumSdl2Error> {
-        let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(unsafe { Context::new(backend.clone(), true, debug) });
+        let backend = Rc::new(SDL2WindowBackend::new(self)?);
+        let context = unsafe { Context::new(backend.clone(), true, debug)? };
 
         let display = SDL2Facade {
             context: context,
@@ -222,8 +216,8 @@ impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
     }
 
     unsafe fn build_glium_unchecked_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, GliumSdl2Error> {
-        let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(Context::new(backend.clone(), false, debug));
+        let backend = Rc::new(SDL2WindowBackend::new(self)?);
+        let context = Context::new(backend.clone(), false, debug)?;
 
         let display = SDL2Facade {
             context: context,
@@ -259,8 +253,8 @@ impl SDL2WindowBackend {
     }
 
     pub fn new(window_builder: &mut sdl2::video::WindowBuilder) -> Result<SDL2WindowBackend, GliumSdl2Error> {
-        let window = try!(window_builder.opengl().build());
-        let context = try!(window.gl_create_context());
+        let window = window_builder.opengl().build()?;
+        let context = window.gl_create_context()?;
 
         Ok(SDL2WindowBackend {
             window: UnsafeCell::new(window),
