@@ -53,8 +53,7 @@
 extern crate glium;
 extern crate sdl2;
 
-use std::mem;
-use std::cell::UnsafeCell;
+use std::{cell::UnsafeCell, mem};
 use std::ops::Deref;
 use std::rc::Rc;
 use std::os::raw::c_void;
@@ -101,9 +100,9 @@ impl std::error::Error for GliumSdl2Error {
         }
     }
 
-    fn cause(&self) -> Option<&std::error::Error> {
+    fn cause(&self) -> Option<&dyn std::error::Error> {
         match *self {
-            GliumSdl2Error::WindowBuildError(ref err) => err.cause(),
+            GliumSdl2Error::WindowBuildError(ref err) => err.source(),
             GliumSdl2Error::ContextCreationError(_) => None
         }
     }
@@ -183,7 +182,7 @@ pub trait DisplayBuild {
     ///
     /// Performs a compatibility check to make sure that all core elements of glium
     /// are supported by the implementation.
-    fn build_glium_debug(self, debug::DebugCallbackBehavior) -> Result<Self::Facade, Self::Err>;
+    fn build_glium_debug(self, callback: debug::DebugCallbackBehavior) -> Result<Self::Facade, Self::Err>;
 
     /// Build a context and a facade to draw on it
     ///
@@ -197,7 +196,7 @@ pub trait DisplayBuild {
     ///
     /// This function does the same as `build_glium`, except that the resulting context
     /// will assume that the current OpenGL context will never change.
-    unsafe fn build_glium_unchecked_debug(self, debug::DebugCallbackBehavior)
+    unsafe fn build_glium_unchecked_debug(self, callback: debug::DebugCallbackBehavior)
         -> Result<Self::Facade, Self::Err>;
 
     // TODO
@@ -210,8 +209,8 @@ impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
     type Err = GliumSdl2Error;
 
     fn build_glium_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, GliumSdl2Error> {
-        let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(unsafe { Context::new(backend.clone(), true, debug) });
+        let backend = Rc::new(SDL2WindowBackend::new(self)?);
+        let context = unsafe { Context::new(backend.clone(), true, debug)? };
 
         let display = SDL2Facade {
             context: context,
@@ -222,8 +221,8 @@ impl<'a> DisplayBuild for &'a mut sdl2::video::WindowBuilder {
     }
 
     unsafe fn build_glium_unchecked_debug(self, debug: debug::DebugCallbackBehavior) -> Result<SDL2Facade, GliumSdl2Error> {
-        let backend = Rc::new(try!(SDL2WindowBackend::new(self)));
-        let context = try!(Context::new(backend.clone(), false, debug));
+        let backend = Rc::new(SDL2WindowBackend::new(self)?);
+        let context = Context::new(backend.clone(), false, debug)?;
 
         let display = SDL2Facade {
             context: context,
@@ -259,8 +258,8 @@ impl SDL2WindowBackend {
     }
 
     pub fn new(window_builder: &mut sdl2::video::WindowBuilder) -> Result<SDL2WindowBackend, GliumSdl2Error> {
-        let window = try!(window_builder.opengl().build());
-        let context = try!(window.gl_create_context());
+        let window = window_builder.opengl().build()?;
+        let context = window.gl_create_context()?;
 
         Ok(SDL2WindowBackend {
             window: UnsafeCell::new(window),
